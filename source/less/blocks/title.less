@@ -1,9 +1,15 @@
 .title {
-  font-family: "Oswald", sans-serif;
   font-size: 36px;
-  line-height: 60px;
-  color: #111111;
+  color: @gray--dark;
   font-weight: normal;
-
-
+  &--secondary {
+    color: @white;
+  }
 }
+
+@media (min-width: @tablet-width) {
+  .title {
+    font-size: 60px;
+  }
+}
+

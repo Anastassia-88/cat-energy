@@ -8,10 +8,7 @@
 }
 
 .form__intro {
-  font-family: "Oswald", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  color: #111111;
+  color: @gray--dark;
 
 
 }
@@ -21,11 +18,18 @@
 }
 
 .form__title {
-  font-family: "Oswald", sans-serif;
   font-size: 24px;
-  line-height: 24px;
-  color: #111111;
+  color: @gray--dark;
 }
+
+@media (min-width: @tablet-width) {
+  .form__title {
+    font-size: 36px;
+  }
+}
+
+
+
 
 .form__list {
   list-style: none;
@@ -38,10 +42,8 @@
 
 
 .form__option {
-   font-family: "Oswald", sans-serif;
    font-size: 16px;
-   line-height: 18px;
-   color: #222222;
+   color: @gray;
 
  }
 
@@ -49,45 +51,14 @@
 
 
 
-::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-  font-family: "Oswald", sans-serif;
+::placeholder {
   font-size: 16px;
-  line-height: 18px;
-    color: #444444;
-    text-transform: uppercase;
-  }
+  color: @gray--light;
+  text-transform: uppercase;
+}
 
-::-moz-placeholder {
-    /* Firefox 19+ */
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-    color: #444444;
-    text-transform: uppercase;
-  }
-
-:-ms-input-placeholder {
-    /* IE 10+ */
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-    color: #444444;
-    text-transform: uppercase;
-  }
-
-:-moz-placeholder {
-    /* Firefox 18- */
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-    color: #444444;
-    text-transform: uppercase;
-  }
 
 .form__legend {
   font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  color: #444444;
+  color: @gray--light;
 }

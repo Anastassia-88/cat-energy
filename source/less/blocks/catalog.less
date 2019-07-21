@@ -6,10 +6,7 @@
 .catalog__item {
   display: flex;
   flex-direction: column;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 25px 20px;
   border-top: 1px solid #ededed;
 
 
@@ -29,10 +26,8 @@
 
 .catalog__title {
   text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
   font-size: 16px;
-  line-height: 20px;
-  color: #111111;
+  color: @gray--dark;
   font-weight: normal;
 
 }
@@ -41,7 +36,9 @@
 
 .catalog__link {
   text-decoration: none;
-  color: #111111;
+  color: @gray--dark;
+  display: flex;
+  flex-direction: column;
 
 
 
@@ -58,7 +55,6 @@
 .catalog__features-list {
   font-family: "Arial", sans-serif;
   font-size: 12px;
-  line-height: 16px;
 
 
 
@@ -76,12 +72,11 @@
 }
 
 .catalog__to-all {
-
+  padding: 25px 20px;
 }
 
 .catalog__text {
   font-family: "Arial", sans-serif;
   font-size: 12px;
-  line-height: 16px;
 }
 

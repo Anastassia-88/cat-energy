@@ -6,7 +6,7 @@
 }
 
 .programs__item {
-  background-color: #f2f2f2;
+  background-color: @gray--lightest;
   margin-bottom: 20px;
   padding-right: 20px;
 
@@ -14,29 +14,32 @@
 
 
 .programs__title {
-  font-family: "Oswald", sans-serif;
   font-size: 24px;
-  line-height: 37px;
-  color: #111111;
+  color: @gray--dark;
   font-weight: normal;
-
 }
+
+@media (min-width: @tablet-width) {
+  .programs__title {
+    font-size: 36px;
+  }
+}
+
+
+
+
 
 
 .programs__description {
   font-family: "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  color: #444444;
+  color: @gray--light;
 
 
 }
 
 .programs__catalog-link {
-  font-family: "Oswald", sans-serif;
   font-size: 16px;
-  line-height: 16px;
-  color: #111111;
+  color: @gray--dark;
   text-transform: uppercase;
   text-decoration: none;
 
