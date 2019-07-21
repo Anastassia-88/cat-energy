@@ -48,13 +48,14 @@
 @media (min-width: @tablet-width) {
   .main-nav__list {
     flex-direction: row;
+
   }
 }
 
 .main-nav__item {
   font-weight: 500;
   color: @gray--dark;
-  padding: 20px;
+
   text-transform: uppercase;
   text-align: center;
   border-bottom: 1px solid @gray--lightest;
@@ -63,6 +64,10 @@
   a {
     text-decoration: none;
     color: inherit;
+    display: block;
+    width: 100%;
+    padding: 18px 20px;
+    box-sizing: border-box;
   }
 
   @medium (min-width: @tablet-width) {
