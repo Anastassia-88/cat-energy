@@ -12,14 +12,23 @@
 .header__logo {
   height: 39px;
   width: 191px;
-  margin-top: 11px;
-  margin-bottom: 15px;
+  margin: 11px 0 15px 20px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: @tablet-width) {
     .header__logo {
       height: 59px;
       width: 174px;
     }
   }
+
   @media (min-width: @desktop-width) {
     .header__logo {
       height: 60px;
@@ -31,12 +40,14 @@
 .header__logo-image {
   height: 39px;
   width: 191px;
+
   @media (min-width: @tablet-width) {
     .header__logo-image {
       height: 59px;
       width: 174px;
     }
   }
+
     @media (min-width: @desktop-width) {
       .header__logo-image {
         height: 60px;
