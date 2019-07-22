@@ -43,12 +43,11 @@
   margin: 0;
   padding: 0;
   border-top: 1px solid @gray--lightest;
-}
 
-@media (min-width: @tablet-width) {
-  .main-nav__list {
+  @media (min-width: @tablet-width) {
+    border: none;
     flex-direction: row;
-
+    flex-wrap: wrap;
   }
 }
 
@@ -60,6 +59,10 @@
   text-align: center;
   border-bottom: 1px solid @gray--lightest;
   font-size: 20px;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 
   a {
     text-decoration: none;

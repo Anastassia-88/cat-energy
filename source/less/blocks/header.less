@@ -1,11 +1,10 @@
 .header {
   display: flex;
   flex-direction: column;
-}
 
-@media (min-width: @tablet-width) {
-  .header {
+  @media (min-width: @tablet-width) {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -14,26 +13,23 @@
   width: 191px;
   margin: 11px 0 15px 20px;
 
+  @media (min-width: @tablet-width) {
+      height: 59px;
+      width: 174px;
+  }
+
+  @media (min-width: @desktop-width) {
+      height: 60px;
+      width: 203px;
+  }
+
+
   &:hover {
     opacity: 0.8;
   }
 
   &:active {
     opacity: 0.6;
-  }
-
-  @media (min-width: @tablet-width) {
-    .header__logo {
-      height: 59px;
-      width: 174px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    .header__logo {
-      height: 60px;
-      width: 203px;
-    }
   }
 }
 
@@ -42,17 +38,13 @@
   width: 191px;
 
   @media (min-width: @tablet-width) {
-    .header__logo-image {
       height: 59px;
       width: 174px;
-    }
   }
 
     @media (min-width: @desktop-width) {
-      .header__logo-image {
         height: 60px;
         width: 203px;
-      }
     }
 }
 
