@@ -2,20 +2,12 @@
   display: flex;
   flex-direction: column;
   background-color: @gray--lightest;
-
-
-
-
-
 }
 
 .footer__logo {
   align-self: center;
-
-
-
-
-
+  margin-top: 39px;
+  margin-bottom: 31px;
 }
 
 .footer__logo-image {
@@ -23,10 +15,12 @@
   width: 128px;
 }
 
+.footer--container {
+  display: flex;
+  flex-direction: column;
 
-
-
-
-
-
-
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

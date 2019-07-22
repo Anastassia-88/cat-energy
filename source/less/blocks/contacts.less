@@ -1,42 +1,41 @@
 .contacts {
   display: flex;
   flex-direction: column;
-
-
-
-
-
 }
 
 .contacts__text {
+  margin: 0;
+  padding: 30px 20px;
   display: flex;
   justify-content: space-between;
-  &--main {
+  &--index {
     background-color: @white;
   }
-
-
-
-
-
 }
-
-
 
 .contacts__title {
   font-weight: normal;
   font-size: 16px;
   color: @gray--dark;
-
-
-
+  text-transform: uppercase;
 }
-
-
 
 .contacts__address {
   font-family: "Arial", sans-serif;
   color: @gray--light;
-
-
 }
+
+.contacts__map-link {
+  height: 362px;
+  overflow: hidden;
+  position: relative;
+}
+
+.contacts__map-image {
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-160px);
+}
+
