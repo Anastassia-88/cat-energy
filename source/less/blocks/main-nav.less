@@ -10,7 +10,7 @@
   cursor: pointer;
   background-color: transparent;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: none;
   }
 }
@@ -54,7 +54,7 @@
   padding: 0;
   border-top: 1px solid @gray--lightest;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     border: none;
     flex-direction: row;
     flex-wrap: wrap;
@@ -70,7 +70,7 @@
   border-bottom: 1px solid @gray--lightest;
   font-size: 20px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     border: none;
   }
 
@@ -83,14 +83,14 @@
     box-sizing: border-box;
   }
 
-  @medium (min-width: @tablet-width) {
+  @media @tablet {
   .main-nav__item {
     font-weight: 400;
     font-size: 18px;
   }
 }
 
-@medium (min-width: @desktop-width) {
+@media @desktop {
   .main-nav__item {
     font-size: 20px;
   }

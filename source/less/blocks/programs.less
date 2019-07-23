@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -25,7 +25,7 @@
     left: 22px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     &::before {
       width: 200px;
       height: 200px;
@@ -66,7 +66,7 @@
   text-transform: uppercase;
   margin: 0 0 35px 70px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
       font-size: 36px;
       margin: 0 0 25px;
   }
@@ -79,7 +79,7 @@
   padding: 0 0 20px;
   border-bottom: 1px solid @gray--lighten;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     border: none;
     font-size: 16px;
   }
@@ -94,7 +94,7 @@
   text-decoration: none;
   position: relative;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
   .programs__catalog-link {
     border: none;
     font-size: 20px;
