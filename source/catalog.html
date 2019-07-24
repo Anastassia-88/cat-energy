@@ -13,7 +13,7 @@
   <a class="header__logo" href="index.html">
     <img class="header__logo-image" alt="logo" height="39" width="191" src="../img/logo-mobile.svg">
   </a>
-  <nav class="main-nav  main-nav--closed">
+  <nav class="main-nav main-nav--nojs main-nav--closed">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <ul class="main-nav__list">
       <li class="main-nav__item"><a href="index.html">Главная</a></li>
@@ -32,7 +32,11 @@
     <div class="catalog__container">
       <div class="catalog__wrapper">
         <a class="catalog__link" href="catalog.html">
-          <img class="catalog__image" alt="Cat Energy PRO 500 г" src="../img/chicken-small-mobile@1x.jpg" width="140" height="144">
+          <picture>
+            <img class="catalog__image" alt="Cat Energy PRO 500 г" src="../img/chicken-small-mobile@1x.jpg">
+            <source media = "min-width: 768px" srcset="img/chicken-small-tablet@1x.png@1x.png">
+            <source media = "min-width: 1220px" srcset="img/chicken-small-desktop@1x.png@1x.png">
+          </picture>
         </a>
         <div class="catalog__description">
           <h3 class="catalog__title">
@@ -65,7 +69,11 @@
       <div class="catalog__container">
         <div class="catalog__wrapper">
           <a class="catalog__link" href="catalog.html">
-            <img class="catalog__image" alt="Cat Energy PRO 1000 г" src="../img/chicken-big-mobile@1x.jpg" width="140" height="144">
+            <picture>
+              <img class="catalog__image" alt="Cat Energy PRO 1000 г" src="../img/chicken-big-mobile@1x.jpg">
+              <source media = "min-width: 768px" srcset="img/chicken-big-tablet@1x.png@1x.png">
+              <source media = "min-width: 1220px" srcset="img/chicken-big-desktop@1x.png@1x.png">
+            </picture>
           </a>
           <div class="catalog__description">
             <h3 class="catalog__title">
@@ -98,7 +106,11 @@
       <div class="catalog__container">
         <div class="catalog__wrapper">
           <a class="catalog__link" href="catalog.html">
-            <img class="catalog__image" alt="Cat Energy PRO 500 г" src="../img/fish-small-mobile@1x.jpg" width="140" height="144">
+            <picture>
+              <img class="catalog__image" alt="Cat Energy PRO 500 г" src="../img/fish-small-mobile@1x.jpg">
+              <source media = "min-width: 768px" srcset="img/fish-small-tablet@1x.png@1x.png">
+              <source media = "min-width: 1220px" srcset="img/fish-small-desktop@1x.png@1x.png">
+            </picture>
           </a>
           <div class="catalog__description">
             <h3 class="catalog__title">
@@ -131,7 +143,11 @@
       <div class="catalog__container">
         <div class="catalog__wrapper">
           <a class="catalog__link" href="catalog.html">
-            <img class="catalog__image" alt="Cat Energy PRO 1000 г" src="../img/fish-big-mobile@1x.jpg" width="140" height="144">
+            <picture>
+              <img class="catalog__image" alt="Cat Energy PRO 1000 г" src="../img/fish-big-mobile@1x.jpg">
+              <source media = "min-width: 768px" srcset="img/fish-big-tablet@1x.png@1x.png">
+              <source media = "min-width: 1220px" srcset="img/fish-big-desktop@1x.png@1x.png">
+            </picture>
           </a>
           <div class="catalog__description">
             <h3 class="catalog__title">
@@ -164,7 +180,11 @@
       <div class="catalog__container">
         <div class="catalog__wrapper">
           <a class="catalog__link" href="catalog.html">
-            <img class="catalog__image" alt="Cat Energy SLIM 500 г" src="../img/buckwheat-small-mobile@1x.jpg" width="140" height="144">
+            <picture>
+              <img class="catalog__image" alt="Cat Energy SLIM 500 г" src="../img/buckwheat-small-mobile@1x.jpg">
+              <source media = "min-width: 768px" srcset="img/buckwheat-small-tablet@1x.png@1x.png">
+              <source media = "min-width: 1220px" srcset="img/buckwheat-small-desktop@1x.png@1x.png">
+            </picture>
           </a>
           <div class="catalog__description">
             <h3 class="catalog__title">
@@ -197,7 +217,11 @@
       <div class="catalog__container">
         <div class="catalog__wrapper">
           <a class="catalog__link" href="catalog.html">
-            <img class="catalog__image" alt="Cat Energy SLIM 1000 г" src="../img/buckwheat-big-mobile@1x.jpg" width="140" height="144">
+            <picture>
+              <img class="catalog__image" alt="Cat Energy SLIM 1000 г" src="../img/buckwheat-big-mobile@1x.jpg">
+              <source media = "min-width: 768px" srcset="img/buckwheat-big-tablet@1x.png@1x.png">
+              <source media = "min-width: 1220px" srcset="img/buckwheat-big-desktop@1x.png@1x.png">
+            </picture>
           </a>
           <div class="catalog__description">
             <h3 class="catalog__title">
@@ -230,7 +254,11 @@
       <div class="catalog__container">
         <div class="catalog__wrapper">
           <a class="catalog__link" href="catalog.html">
-            <img class="catalog__image" alt="Cat Energy SLIM 500 г" src="../img/rice-small-mobile@1x.jpg" width="140" height="144">
+            <picture>
+              <img class="catalog__image" alt="Cat Energy SLIM 500 г" src="../img/rice-small-mobile@1x.jpg">
+              <source media = "min-width: 768px" srcset="img/rice-small-tablet@1x.png@1x.png">
+              <source media = "min-width: 1220px" srcset="img/rice-small-desktop@1x.png@1x.png">
+            </picture>
           </a>
           <div class="catalog__description">
             <h3 class="catalog__title">
@@ -366,10 +394,9 @@
         <span>Санкт-Петербург</span>
       </div>
     </div>
-    <a class="contacts__map-link">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sde!4v1563801092473!5m2!1sru!2sde" width="320" height="362" frameborder="0" style="border:0" allowfullscreen></iframe>
-      <img src="../img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта">
-    </a>
+    <div class="contacts__map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sde!4v1563801092473!5m2!1sru!2sde" width="100%" height="362" frameborder="0" style="border: 0" allowfullscreen></iframe>
+    </div>
   </div>
   <div class="container footer--container">
     <a class="footer__logo" href="index.html">
