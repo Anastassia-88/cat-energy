@@ -10,8 +10,12 @@
 <body>
 
 <header class="header">
-  <a class="header__logo" href="index.html">
-    <img class="header__logo-image" alt="logo" height="39" width="191" src="../img/logo-mobile.svg">
+  <a class="header__logo">
+    <picture>
+      <img class="header__logo-image" alt="logo" src="img/logo-mobile.svg">
+      <source media = "min-width: 768px" srcset="img/logo-tablet.svg">
+      <source media = "min-width: 1220px" srcset="img/logo-desktop.svg">
+    </picture>
   </a>
   <nav class="main-nav main-nav--nojs main-nav--closed">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -135,7 +139,7 @@
   </div>
   <div class="container footer--container">
     <a class="footer__logo" href="index.html">
-      <img class="footer__logo-image" alt="logo" height="24" width="128" src="../img/logo-footer.svg">
+      <img class="footer__logo-image" alt="logo" height="24" width="128" src="img/logo-footer.svg">
     </a>
     <div class="social">
       <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">

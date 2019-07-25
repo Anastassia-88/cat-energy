@@ -1,4 +1,5 @@
 .catalog {
+  .container;
   display: flex;
   flex-direction: column;
   border-top: 1px solid #ededed;
@@ -12,9 +13,11 @@
 .catalog__item {
   padding: 0 0 25px;
   border-bottom: 1px solid #ededed;
+  position: relative;
 
   @media @tablet {
     background-color: @gray--lightest;
+    width: 324px;
   }
 }
 
@@ -57,19 +60,29 @@
   color: @gray--dark;
   display: flex;
   flex-direction: column;
+
 }
 
 .catalog__image {
+
   height: 144px;
   width: 140px;
 
   @media @tablet {
-    height: 172px;
-    width: 161px;
+    position: absolute;
+
+    &--big {
+      height: 210px;
+      width: 195px;
+      top: -80px;
+    }
+
+    &--small {
+      height: 175px;
+      width: 165px;
+      top: -45px;
+    }
   }
-
-
-
 }
 
 .catalog__features-list {
