@@ -9,6 +9,12 @@
   margin-top: 39px;
   margin-bottom: 31px;
   font-size: 0;
+  padding: 0;
+
+
+
+
+
 }
 
 .footer__logo-image {
@@ -16,12 +22,15 @@
   width: 128px;
 }
 
-.footer--container {
+.footer__container {
+  .container;
   display: flex;
   flex-direction: column;
 
   @media @tablet {
     flex-direction: row;
     justify-content: space-between;
+    height: 150px;
+    align-items: center;
   }
 }
