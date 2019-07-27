@@ -1,4 +1,8 @@
 .main-nav {
+  @media @mobile {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 }
 
 .main-nav__toggle {
@@ -27,6 +31,7 @@
     border: none;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-top: 19px;
   }
 }
 
@@ -44,6 +49,7 @@
     border: none;
     font-size: 18px;
     font-weight: 400;
+    margin-left: 40px;
   }
 
   @media @desktop {
@@ -60,8 +66,10 @@
     width: 100%;
     padding: 18px 20px;
     border-bottom: 1px solid @gray--lightest;
+
     @media @tablet {
       border: none;
+      padding: 0;
     }
   }
   &--active {
