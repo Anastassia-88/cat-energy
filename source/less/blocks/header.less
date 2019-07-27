@@ -2,7 +2,7 @@
   .container;
   display: flex;
   flex-direction: column;
-
+  position: relative;
   padding-top: 11px;
 
   @media @tablet {
@@ -15,6 +15,10 @@
 
   @media @desktop {
     padding-top: 53px;
+
+    &--index {
+      margin-bottom: 648px;
+    }
   }
 }
 
@@ -59,12 +63,4 @@
     }
 }
 
-.header__button {
 
-  @media @tablet {
-    position: absolute;
-    left: 50px;
-    top: 345px;
-    z-index: 1;
-  }
-}
