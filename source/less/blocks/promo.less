@@ -15,8 +15,11 @@
 
   @media @tablet {
     background: none;
-
     color: @gray--dark;
+    flex-grow: 1;
+    padding-top: 45px;
+    margin-bottom: 0;
+    height: 852px;
   }
 
   &::after {
@@ -30,27 +33,49 @@
     background-image: url("../img/index-can-mobile@1x.png");
     background-repeat: no-repeat;
     background-size: 280px 270px;
+
+    @media @tablet {
+      top: 243px;
+      background-image: url("../img/index-can-tablet@1x.jpg");
+      width: 709px;
+      height: 609px;
+      background-size: 709px 609px;
+      left: 50%;
+      transform: translateX(-355px);
+    }
+
+    @media @desktop {
+      background-image: url("../img/index-can-desktop@1x.png");
+      width: 552px;
+      height: 499px;
+      background-size: 552px 499px;
+    }
   }
 }
 
 .promo__title {
-    font-size: 36px;
-    font-weight: normal;
-    line-height: 1;
-    margin: 0 0 15px;
-    text-align: center;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0 0 19px;
+  text-align: center;
 
-    @media @tablet {
-      font-size: 60px;
-    }
+  @media @tablet {
+    font-size: 60px;
+    text-align: left;
+    margin-bottom: 33px;
+  }
 }
 
 .promo__text {
   text-transform: uppercase;
-  margin: 0 0 300px;
+  margin: 0;
   text-align: center;
 
   @media @tablet {
     font-size: 20px;
+    text-align: left;
   }
 }
+
+
