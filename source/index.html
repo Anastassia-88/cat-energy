@@ -37,7 +37,7 @@
 
 <main class="main">
 
-  <div class="container">
+  <div class="container container--adaptive">
     <section class="programs">
       <h2 class="visually-hidden">Programs</h2>
       <article class="programs__item programs__item--slim">
@@ -73,27 +73,29 @@
   </div>
 
   <section class="example">
-    <div class="container">
+    <div class="container container--adaptive">
       <h2 class="title">Живой пример</h2>
       <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
         Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
         по-прежнему спит по 16 часов в день. </p>
-      <dl class="example__stats-item">
-        <dt>Снижение веса</dt>
-        <dd>5 кг</dd>
-      </dl>
-      <dl class="example__stats-item">
-        <dt>Затрачено времени</dt>
-        <dd>60 дней</dd>
-      </dl>
+      <div class="example__stats">
+        <dl class="example__stats-item">
+          <dt>Снижение веса</dt>
+          <dd>5 кг</dd>
+        </dl>
+        <dl class="example__stats-item">
+          <dt>Затрачено времени</dt>
+          <dd>60 дней</dd>
+        </dl>
+      </div>
       <p class="text">Затраты на питание: 15 000 руб.</p>
       <img class="example__image" height="232" src="img/before-mobile@1x.png" width="311" alt="Фото кота">
-      <p><span>Было</span><span>Стало</span></p>
+      <p class="example__toggle"><span>Было</span><span>Стало</span></p>
     </div>
   </section>
 </main>
 
-<footer class="footer">
+<footer class="footer footer--index">
   <section class="contacts">
     <h2 class="visually-hidden">Контакты</h2>
     <div class="contacts__text contacts__text--index">

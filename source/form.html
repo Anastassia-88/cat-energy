@@ -32,7 +32,10 @@
   <h1 class="title">Подбор программы</h1>
 
   <form action="https://echo.htmlacademy.ru" class="form" method="post">
-    <p class="form__intro">Заполните анкету и мы подберем программу питания для вашего кота</p>
+    <p class="form__intro">
+      Заполните анкету и мы подберем<br>
+      программу питания для вашего кота
+    </p>
 
     <fieldset class="form__group">
       <legend class="visually-hidden">Данные кота</legend>
@@ -55,15 +58,15 @@
     <fieldset class="form__group">
       <legend class="visually-hidden">Цель</legend>
       <ul class="form__list">
-        <li class="form__option">
+        <li class="form__option form__option--radio">
           <input class="visually-hidden form__radio" id="lose-weight" name="target" type="radio">
           <label for="lose-weight">Похудение</label>
         </li>
-        <li class="form__option">
+        <li class="form__option form__option--radio">
           <input class="visually-hidden form__radio" id="gain-weight" name="target" type="radio">
           <label for="gain-weight">Набор массы</label>
         </li>
-        <li class="form__option">
+        <li class="form__option form__option--radio">
           <input class="visually-hidden form__radio" id="need-advice" name="target" type="radio">
           <label for="need-advice">Не знаю (Нужен ваш совет)</label>
         </li>
@@ -85,10 +88,10 @@
     </fieldset>
 
     <fieldset class="form__group">
+      <legend class="form__title">Комментарий</legend>
       <ul class="form__list">
-        <li class="form__option">
-          <legend class="form__title">Комментарий</legend>
-          <textarea class="form__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <li class="form__option form__option--textarea">
+          <textarea class="form__textarea" name="comment" placeholder="Расскажите обо всех повадках кота" rows="5"></textarea>
         </li>
       </ul>
     </fieldset>
@@ -96,19 +99,19 @@
     <fieldset class="form__group">
       <legend class="form__title">Дополнительно</legend>
       <ul class="form__list">
-        <li class="form__option">
+        <li class="form__option form__option--checkbox">
           <input class="visually-hidden form__checkbox" id="sweetener" name="sweetener" type="checkbox">
           <label for="sweetener">Сахарозаменитель</label>
         </li>
-        <li class="form__option">
+        <li class="form__option form__option--checkbox">
           <input class="visually-hidden form__checkbox" id="water" name="water" type="checkbox">
           <label for="water">Питьевая вода</label>
         </li>
-        <li class="form__option">
+        <li class="form__option form__option--checkbox">
           <input class="visually-hidden form__checkbox" id="milk" name="milk" type="checkbox">
           <label for="milk">Молоко</label>
         </li>
-        <li class="form__option">
+        <li class="form__option form__option--checkbox">
           <input class="visually-hidden form__checkbox" id="vitamins" name="vitamins" type="checkbox">
           <label for="vitamins">Витамины</label>
         </li>

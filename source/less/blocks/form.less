@@ -6,21 +6,32 @@
 .form__intro {
   color: @gray--dark;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .form__group {
   border: none;
   padding: 0;
   margin: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    margin-left: -20px;
+    height: 1px;
+    background-color: @gray--lighten;
+    bottom: 0;
+  }
 }
 
 .form__title {
   font-size: 24px;
   color: @gray--dark;
-}
 
-@media @tablet {
-  .form__title {
+  @media @tablet {
     font-size: 36px;
   }
 }
@@ -37,6 +48,50 @@
   text-transform: uppercase;
   display: flex;
   height: 45px;
+  margin-bottom: 14px;
+
+  &--radio {
+    margin-left: 50px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      border: 1px solid @gray--lighten;
+      left: -45px;
+      top: 6px;
+    }
+  }
+
+  &--textarea {
+    height: auto;
+  }
+
+  &--checkbox {
+    margin-left: 50px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      box-sizing: border-box;
+      border: 1px solid @gray--lighten;
+      left: -45px;
+      top: 8px;
+    }
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
  }
 
 .form__text {
@@ -46,6 +101,7 @@
   border: 1px solid @gray--lighten;
   margin: 0;
   padding: 0;
+  padding-left: 15px;
 }
 
 ::placeholder {
@@ -65,6 +121,8 @@
 
 .form__textarea {
   flex-grow: 1;
+  box-sizing: border-box;
   height: 150px;
+  padding: 15px;
 
 }
