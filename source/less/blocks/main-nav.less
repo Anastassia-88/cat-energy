@@ -5,6 +5,12 @@
 
     &--index {
       color: @white;
+
+      .main-nav__item {
+        &--active {
+          border-bottom: 2px solid @white;
+        }
+      }
     }
   }
 
@@ -51,25 +57,23 @@
 
 .main-nav__item {
   font-weight: 500;
-
-
   text-transform: uppercase;
   text-align: center;
-
   font-size: 20px;
-
 
   @media @tablet {
     border: none;
     font-size: 18px;
     font-weight: 400;
     margin-left: 40px;
+
+    &--active {
+      border-bottom: 2px solid #68b738;
+    }
   }
 
   @media @desktop {
-    border: none;
     font-size: 20px;
-
   }
 
   a {
@@ -81,13 +85,21 @@
     padding: 18px 20px;
     border-bottom: 1px solid @gray--lightest;
 
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
     @media @tablet {
       border: none;
       padding: 0;
     }
   }
-  &--active {
-  }
+
+
 }
 
 @media @mobile {

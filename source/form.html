@@ -37,41 +37,43 @@
       программу питания для вашего кота
     </p>
 
-    <fieldset class="form__group">
-      <legend class="visually-hidden">Данные кота</legend>
-      <ul class="form__list">
-        <li class="form__option">
-          <label for="name">Имя:*</label>
-          <input class="form__text" id="name" type="text" name="name" placeholder="Барсик">
-        </li>
-        <li class="form__option">
-          <label for="weight">Вес (кг):*</label>
-          <input class="form__text" id="weight" type="number" name="weight" placeholder="7">
-        </li>
-        <li class="form__option">
-          <label for="age">Возраст (лет):</label>
-          <input class="form__text" id="age" type="number" name="age" placeholder="7">
-        </li>
-      </ul>
-    </fieldset>
+    <div class="form__container">
+      <fieldset class="form__group form__group--cat-data">
+        <legend class="visually-hidden">Данные кота</legend>
+        <ul class="form__list">
+          <li class="form__option">
+            <label for="name">Имя:*</label>
+            <input class="form__text" id="name" type="text" name="name" placeholder="Барсик">
+          </li>
+          <li class="form__option">
+            <label for="weight">Вес (кг):*</label>
+            <input class="form__text" id="weight" type="number" name="weight" placeholder="7">
+          </li>
+          <li class="form__option">
+            <label for="age">Возраст (лет):</label>
+            <input class="form__text" id="age" type="number" name="age" placeholder="7">
+          </li>
+        </ul>
+      </fieldset>
 
-    <fieldset class="form__group">
-      <legend class="visually-hidden">Цель</legend>
-      <ul class="form__list">
-        <li class="form__option form__option--radio">
-          <input class="visually-hidden form__radio" id="lose-weight" name="target" type="radio">
-          <label for="lose-weight">Похудение</label>
-        </li>
-        <li class="form__option form__option--radio">
-          <input class="visually-hidden form__radio" id="gain-weight" name="target" type="radio">
-          <label for="gain-weight">Набор массы</label>
-        </li>
-        <li class="form__option form__option--radio">
-          <input class="visually-hidden form__radio" id="need-advice" name="target" type="radio">
-          <label for="need-advice">Не знаю (Нужен ваш совет)</label>
-        </li>
-      </ul>
-    </fieldset>
+      <fieldset class="form__group form__group--radio">
+        <legend class="visually-hidden">Цель</legend>
+        <ul class="form__list">
+          <li class="form__option form__option--radio">
+            <input class="visually-hidden form__radio" id="lose-weight" name="target" type="radio">
+            <label for="lose-weight">Похудение</label>
+          </li>
+          <li class="form__option form__option--radio">
+            <input class="visually-hidden form__radio" id="gain-weight" name="target" type="radio">
+            <label for="gain-weight">Набор массы</label>
+          </li>
+          <li class="form__option form__option--radio">
+            <input class="visually-hidden form__radio" id="need-advice" name="target" type="radio">
+            <label for="need-advice">Не знаю (Нужен ваш совет)</label>
+          </li>
+        </ul>
+      </fieldset>
+    </div>
 
     <fieldset class="form__group">
       <legend class="form__title">Контактные данные (владельца кота)</legend>
@@ -98,7 +100,7 @@
 
     <fieldset class="form__group">
       <legend class="form__title">Дополнительно</legend>
-      <ul class="form__list">
+      <ul class="form__list form__list--secondary">
         <li class="form__option form__option--checkbox">
           <input class="visually-hidden form__checkbox" id="sweetener" name="sweetener" type="checkbox">
           <label for="sweetener">Сахарозаменитель</label>
