@@ -9,10 +9,20 @@
 }
 
 .programs__item {
+  box-sizing: border-box;
   background-color: @gray--lightest;
   margin-bottom: 20px;
   padding: 40px 20px 20px;
   position: relative;
+
+  @media @tablet {
+    min-height: 372px;
+    margin-bottom: 30px;
+  }
+
+  @media @desktop {
+    width: 570px;
+  }
 
   &::before {
     content: "";
@@ -35,18 +45,34 @@
     }
   }
 
+  &--slim {
+    padding-right: 285px;
+  }
+
+  &--pro {
+    padding-right: 315px;
+  }
+
   &::after {
     content: "";
     position: absolute;
     background-repeat: no-repeat;
   }
 
-  &--slim::after {
-    width: 35px;
-    height: 49px;
-    background-image: url("../img/icon-cat-slim.svg");
-    top: 22px;
-    left: 30px;
+    &--slim::after {
+      width: 35px;
+      height: 49px;
+      background-image: url("../img/icon-cat-slim.svg");
+      top: 22px;
+      left: 30px;
+
+      @media @tablet {
+        width: 141px;
+        height: 194px;
+        left: auto;
+        top: 80px;
+        right: 92px;
+    }
   }
 
   &--pro::after {
@@ -55,9 +81,16 @@
     background-image: url("../img/icon-cat-pro.svg");
     top: 35px;
     left: 13px;
+
+    @media @tablet {
+      width: 268px;
+      height: 113px;
+      left: auto;
+      top: 135px;
+      right: 28px;
+    }
   }
 }
-
 
 .programs__title {
   font-size: 24px;
@@ -83,8 +116,6 @@
     border: none;
     font-size: 16px;
   }
-
-
 }
 
 .programs__catalog-link {

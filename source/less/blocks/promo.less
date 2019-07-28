@@ -4,7 +4,7 @@
   padding: 25px 20px 0;
   position: relative;
 
-  //background-color: #63a837;
+
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
@@ -42,6 +42,27 @@
     padding-left: 0;
     padding-right: 800px;
   }
+
+  @media @mobile {
+    &::before {
+      content: "";
+      height: 305px;
+      width: 100vw;
+      position: absolute;
+      background-color: #63a837;
+      top: 0;
+      z-index: -1;
+
+
+    }
+  }
+
+
+
+
+
+
+
 
   &::after {
     content: "";
@@ -92,6 +113,9 @@
     margin-bottom: 30px;
     width: auto;
   }
+
+
+
 }
 
 .promo__text {

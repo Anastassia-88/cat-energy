@@ -1,5 +1,4 @@
 .catalog {
-  .container;
   display: flex;
   flex-direction: column;
   border-top: 1px solid #ededed;
@@ -13,6 +12,15 @@
   @media @desktop {
   justify-content: space-between;
   }
+
+  &--secondary {
+    flex-direction: column;
+
+
+
+
+
+  }
 }
 
 .catalog__item {
@@ -22,8 +30,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 280px;
-  margin: 0 auto;
+  justify-content: space-between;
 
   @media @tablet {
     border: none;
@@ -52,22 +59,31 @@
     }
   }
 
+  &--to-all {
+    background-color: @white;
+    padding: 80px 0 25px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 31px;
+      height: 31px;
+      background-image: url("../img/icon-plus-mobile.svg");
+      background-repeat: no-repeat;
+      top: 27px;
+      left: 50%;
+      transform: translateX(-16px);
+    }
+  }
+
   &--secondary {
 
-      padding: 80px 0 25px;
 
-      &::before {
-        content: "";
-        position: absolute;
-        width: 31px;
-        height: 31px;
-        background-image: url("../img/icon-plus-mobile.svg");
-        background-repeat: no-repeat;
-        top: 27px;
-        left: 50%;
-        transform: translateX(-16px);
-      }
-  }
+    }
+
+
+
+
 }
 
 .catalog__container {
@@ -96,7 +112,7 @@
   margin: 0 0 15px;
   line-height: 1.25;
 
-  &--secondary {
+  &--to-all {
     text-align: center;
     margin: 0 0 10px;
   }

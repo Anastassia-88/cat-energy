@@ -1,4 +1,13 @@
 .main-nav {
+  color: @gray--dark;
+
+  @media @desktop {
+
+    &--index {
+      color: @white;
+    }
+  }
+
   @media @mobile {
     margin-left: -20px;
     margin-right: -20px;
@@ -13,6 +22,7 @@
   top: 23px;
   cursor: pointer;
   background-color: transparent;
+
 
   @media @tablet {
     display: none;
@@ -41,7 +51,7 @@
 
 .main-nav__item {
   font-weight: 500;
-  color: @gray--dark;
+
 
   text-transform: uppercase;
   text-align: center;
@@ -59,7 +69,7 @@
   @media @desktop {
     border: none;
     font-size: 20px;
-    color: @white;
+
   }
 
   a {

@@ -9,21 +9,23 @@
     padding-right: 30px;
   }
 
-  &--adaptive {
-    width: 320px;
-    margin: 0 auto;
-
-
-    @media @tablet {
-
-      width: 768px;
-    }
-  }
-
   @media @desktop {
     width: 1440px;
     margin: 0 auto;
     padding-left: 110px;
     padding-right: 110px;
+  }
+}
+
+.container--adaptive {
+  width: 320px;
+  margin: 0 auto;
+
+  @media @tablet {
+    width: 768px;
+  }
+
+  @media @desktop {
+    width: 1440px;
   }
 }

@@ -10,7 +10,7 @@
 <body>
 
 <header class="header">
-  <a class="header__logo">
+  <a class="header__logo" href="index.html">
     <picture>
       <source media = "(min-width: 1440px)" srcset="img/logo-desktop.svg">
       <source media = "(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -28,10 +28,12 @@
 </header>
 
 <main class="main">
-  <h1 class="title ">Каталог продукции</h1>
-  <section class="catalog">
-    <h2 class="visually-hidden">Основные товары</h2>
+  <div class="container container--adaptive">
+    <h1 class="title">Каталог продукции</h1>
+  </div>
 
+  <section class="catalog">
+   <h2 class="visually-hidden">Основные товары</h2>
     <article class="catalog__item">
         <div class="catalog__wrapper">
           <a class="catalog__link" href="catalog.html">
@@ -64,7 +66,7 @@
             </table>
           </div>
         </div>
-        <a class="button">Заказать</a>
+        <a class="button catalog__button">Заказать</a>
   </article>
 
     <article class="catalog__item">
@@ -99,7 +101,7 @@
             </table>
           </div>
         </div>
-        <a class="button">Заказать</a>
+        <a class="button catalog__button">Заказать</a>
     </article>
 
     <article class="catalog__item">
@@ -134,7 +136,7 @@
             </table>
           </div>
         </div>
-        <a class="button">Заказать</a>
+        <a class="button catalog__button">Заказать</a>
     </article>
 
     <article class="catalog__item">
@@ -169,7 +171,7 @@
             </table>
           </div>
         </div>
-        <a class="button">Заказать</a>
+        <a class="button catalog__button">Заказать</a>
     </article>
 
     <article class="catalog__item">
@@ -204,7 +206,7 @@
             </table>
           </div>
         </div>
-        <a class="button">Заказать</a>
+        <a class="button catalog__button">Заказать</a>
     </article>
 
     <article class="catalog__item">
@@ -239,7 +241,7 @@
             </table>
           </div>
         </div>
-        <a class="button">Заказать</a>
+        <a class="button catalog__button">Заказать</a>
     </article>
 
     <article class="catalog__item">
@@ -274,24 +276,24 @@
             </table>
           </div>
         </div>
-        <a class="button">Заказать</a>
+        <a class="button catalog__button">Заказать</a>
     </article>
 
-    <article class="catalog__item catalog__item--secondary">
-        <h3 class="catalog__title catalog__title--secondary">
+    <article class="catalog__item catalog__item--to-all">
+        <h3 class="catalog__title catalog__title--to-all">
           Показать еще 100500 товаров
         </h3>
         <p class="catalog__text">
           На самом деле вкусов гораздо больше!
         </p>
-        <a class="button button--secondary" href="#">Показать все</a>
+        <a class="button button--to-all" href="#">Показать все</a>
     </article>
   </section>
 
-    <section class="catalog">
+    <section class="catalog catalog--secondary">
         <h2 class="catalog__title">Дополнительные товары</h2>
 
-        <article class="catalog__item">
+        <article class="catalog__item catalog__item--secondary">
           <div class="catalog__description">
             <h3 class="catalog__title">
               <a class="catalog__link" href="catalog.html">
@@ -305,10 +307,10 @@
               </tr>
             </table>
           </div>
-          <a class="button">Заказать</a>
+          <a class="button catalog__button">Заказать</a>
         </article>
 
-        <article class="catalog__item">
+        <article class="catalog__item catalog__item--secondary">
           <div class="catalog__description">
             <h3 class="catalog__title">
               <a class="catalog__link" href="catalog.html">
@@ -322,10 +324,10 @@
               </tr>
             </table>
           </div>
-          <a class="button">Заказать</a>
+          <a class="button catalog__button">Заказать</a>
         </article>
 
-        <article class="catalog__item">
+        <article class="catalog__item catalog__item--secondary">
           <div class="catalog__description">
             <h3 class="catalog__title">
               <a class="catalog__link" href="catalog.html">
@@ -339,10 +341,10 @@
               </tr>
             </table>
           </div>
-          <a class="button">Заказать</a>
+          <a class="button catalog__button">Заказать</a>
         </article>
 
-        <article class="catalog__item">
+        <article class="catalog__item catalog__item--secondary">
           <div class="catalog__description">
             <h3 class="catalog__title">
               <a class="catalog__link" href="catalog.html">
@@ -356,13 +358,16 @@
               </tr>
             </table>
           </div>
-          <a class="button">Заказать</a>
+          <a class="button catalog__button">Заказать</a>
         </article>
     </section>
 
-    <article class="bonus">
-        <h2 class="bonus__title">Закажите все и получите чехол для кота в подарок!</h2>
-    </article>
+    <div class="container container--adaptive">
+      <article class="gift">
+        <h2 class="gift__title">Закажите все и получите чехол для кота в подарок!</h2>
+      </article>
+    </div>
+
 </main>
 
 <footer class="footer">

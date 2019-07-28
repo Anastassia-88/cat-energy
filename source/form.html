@@ -10,7 +10,7 @@
 <body>
 
 <header class="header">
-  <a class="header__logo">
+  <a class="header__logo" href="index.html">
     <picture>
       <source media = "(min-width: 1440px)" srcset="img/logo-desktop.svg">
       <source media = "(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -27,7 +27,8 @@
   </nav>
 </header>
 
-<main class="main">
+<main class="main container">
+
   <h1 class="title">Подбор программы</h1>
 
   <form action="https://echo.htmlacademy.ru" class="form" method="post">
@@ -84,8 +85,12 @@
     </fieldset>
 
     <fieldset class="form__group">
-      <legend class="form__title">Комментарий</legend>
-      <textarea class="form__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+      <ul class="form__list">
+        <li class="form__option">
+          <legend class="form__title">Комментарий</legend>
+          <textarea class="form__textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </li>
+      </ul>
     </fieldset>
 
     <fieldset class="form__group">
