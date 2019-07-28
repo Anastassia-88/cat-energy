@@ -18,10 +18,19 @@
   @media @tablet {
     min-height: 372px;
     margin-bottom: 30px;
+
+    &--slim {
+      padding-right: 285px;
+    }
+
+    &--pro {
+      padding-right: 315px;
+    }
   }
 
   @media @desktop {
     width: 570px;
+    padding: 81px 50px 20px;
   }
 
   &::before {
@@ -33,24 +42,22 @@
     position: absolute;
     top: 24px;
     left: 22px;
-  }
 
-  @media @tablet {
-    &::before {
+    @media @tablet {
       width: 200px;
       height: 200px;
       top: 90px;
       left: auto;
       right: 60px;
     }
-  }
 
-  &--slim {
-    padding-right: 285px;
-  }
-
-  &--pro {
-    padding-right: 315px;
+    @media @desktop {
+      width: 100px;
+      height: 100px;
+      right: auto;
+      top: 47px;
+      left: 52px;
+    }
   }
 
   &::after {
@@ -59,20 +66,28 @@
     background-repeat: no-repeat;
   }
 
-    &--slim::after {
-      width: 35px;
-      height: 49px;
-      background-image: url("../img/icon-cat-slim.svg");
-      top: 22px;
-      left: 30px;
+  &--slim::after {
+    width: 35px;
+    height: 49px;
+    background-image: url("../img/icon-cat-slim.svg");
+    top: 22px;
+    left: 30px;
 
-      @media @tablet {
-        width: 141px;
-        height: 194px;
-        left: auto;
-        top: 80px;
-        right: 92px;
+    @media @tablet {
+      width: 141px;
+      height: 194px;
+      left: auto;
+      top: 80px;
+      right: 92px;
     }
+
+      @media @desktop {
+        width: 71px;
+        height: 97px;
+        right: auto;
+        top: 41px;
+        left: 65px;
+      }
   }
 
   &--pro::after {
@@ -88,6 +103,14 @@
       left: auto;
       top: 135px;
       right: 28px;
+    }
+
+    @media @desktop {
+      width: 134px;
+      height: 57px;
+      right: auto;
+      top: 69px;
+      left: 34px;
     }
   }
 }
