@@ -4,26 +4,88 @@
   align-items: center;
   border-top: 1px solid @gray--lighten;
   border-bottom: 1px solid @gray--lighten;
-  height: 60px;
+  height: 62px;
+
+  @media @tablet {
+    border: none;
+  }
 }
 
 .social__link {
 
-  &--vkontakte {
-    width: 30px;
-    height: 16px;
+  font-size: 0;
 
+  svg {
+    fill: #666666;
+
+    &:hover {
+      fill: #68b738;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
+
+  &--vkontakte {
+    width: 22px;
+    height: 12px;
+
+    @media @tablet {
+      width: 30px;
+      height: 16px;
+    }
+
+    svg {
+      width: 22px;
+      height: 12px;
+
+      @media @tablet {
+        width: 30px;
+        height: 16px;
+      }
+    }
+  }
+
   &--instagram {
-    width: 23px;
-    height: 23px;
+    width: 17px;
+    height: 17px;
     margin-right: 40px;
     margin-left: 40px;
 
-  }
-  &--facebook {
-    width: 14px;
-    height: 28px;
+    @media @tablet {
+      width: 23px;
+      height: 23px;
+    }
 
+    svg {
+      width: 17px;
+      height: 17px;
+
+      @media @tablet {
+        width: 23px;
+        height: 23px;
+      }
+    }
+  }
+
+  &--facebook {
+    width: 10px;
+    height: 19px;
+
+    @media @tablet {
+      width: 14px;
+      height: 28px;
+    }
+
+    svg {
+      width: 10px;
+      height: 19px;
+
+      @media @tablet {
+        width: 14px;
+        height: 28px;
+      }
+    }
   }
 }

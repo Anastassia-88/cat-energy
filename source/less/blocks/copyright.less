@@ -1,7 +1,7 @@
 .copyright {
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 78px;
   align-items: center;
 }
 
@@ -10,8 +10,27 @@
   font-family: "Arial", sans-serif;
   font-size: 16px;
   color: @gray--light;
+  margin-right: 23px;
+
+  &:active {
+    opacity: 0.3;
+  }
+
 }
 
 .copyright__image {
+  width: 27px;
+  height: 34px;
 
+  svg {
+    fill: #666666;
+
+    &:hover {
+      fill: #68b738;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }

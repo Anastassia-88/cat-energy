@@ -1,12 +1,11 @@
 .button {
-  font-size: 16px;
-
   display: flex;
-
-  padding-top: 10px;
-  padding-bottom: 10px;
-
+  font-size: 16px;
+  height: 40px;
+  box-sizing: border-box;
   text-transform: uppercase;
+  padding-left: 30px;
+  padding-right: 30px;
 
   color: @white;
   background-color: @btn-main-bg;
@@ -15,8 +14,35 @@
   align-items: center;
   text-decoration: none;
 
-  &--secondary {
+
+
+
+
+
+  &--big {
+
+    @media @tablet {
+      height: 52px;
+      font-size: 20px;
+    }
+  }
+
+
+
+
+
+
+
+  &--to-all {
     color: @gray--light;
     background-color: @gray--lightest;
   }
+
+
+
+
+
+
+
+
 }

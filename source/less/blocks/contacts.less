@@ -1,22 +1,25 @@
 .contacts {
+  position: relative;
   display: flex;
   flex-direction: column;
 }
 
 .contacts__text {
+  .container;
   display: flex;
   justify-content: space-between;
 
-  &--index {
+  @media @desktop {
+    position: absolute;
+    top: 95px;
+    left: 50%;
+    transform: translateX(-610px);
+    z-index: 4;
+    width: 570px;
+    padding: 0 90px 0 75px;
     background-color: @white;
   }
 }
-
-
-
-
-
-
 
 .contacts__title {
   font-weight: normal;
@@ -25,7 +28,7 @@
   text-transform: uppercase;
   padding: 30px 0;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     font-size: 20px;
   }
 }
@@ -38,42 +41,27 @@
   justify-content: space-between;
   padding: 30px 0;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     font-size: 16px;
   }
 }
 
-.contacts__map-link {
-  height: 362px;
-  overflow: hidden;
+.contacts__map {
+  height: 400px;
   position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    background-image: url("../img/map-pin.png");
-    background-repeat: no-repeat;
-    top: 139px;
-  }
 
   iframe {
     z-index: 3;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-160px);
+    width: 100%;
+    height: 400px;
+    border: 0;
+
+    @media @desktop {
+      width: 1440px;
+    }
+  }
+
+  @media @desktop {
+    margin: 0 auto;
   }
 }
-
-.contacts__map-image {
-  z-index: 1;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-160px);
-
-
-
-}
-

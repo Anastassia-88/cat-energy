@@ -1,0 +1,149 @@
+.promo {
+  box-sizing: border-box;
+  height: 500px;
+  padding: 25px 20px 0;
+  position: relative;
+
+
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 320px 305px;
+
+  color: @white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  @media @tablet {
+    background: none;
+    color: @gray--dark;
+    flex-grow: 1;
+    padding-top: 45px;
+    margin-bottom: 0;
+    height: 865px;
+    align-items: stretch;
+    padding-left: 120px;
+  }
+
+  @media @desktop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 720px 696px;
+    z-index: -1;
+    width: 1250px;
+    padding-top: 226px;
+    padding-left: 0;
+    padding-right: 800px;
+  }
+
+  @media @mobile {
+    &::before {
+      content: "";
+      height: 305px;
+      width: 100vw;
+      position: absolute;
+      background-color: #63a837;
+      top: 0;
+      z-index: -1;
+
+
+    }
+  }
+
+
+
+
+
+
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 270px;
+    top: 168px;
+    left: 50%;
+    transform: translateX(-140px);
+    background-image: url("../img/index-can-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: 280px 270px;
+
+    @media @tablet {
+      top: 243px;
+      background-image: url("../img/index-can-tablet@1x.jpg");
+      width: 709px;
+      height: 609px;
+      background-size: 709px 609px;
+      left: 50%;
+      transform: translateX(-355px);
+    }
+
+    @media @desktop {
+      background-image: url("../img/index-can-desktop@1x.png");
+      width: 552px;
+      height: 499px;
+      background-size: 552px 499px;
+      top: 142px;
+      left: auto;
+      right: 328px;
+      transform: none;
+    }
+  }
+}
+
+.promo__title {
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0 0 19px;
+  text-align: center;
+  width: 280px;
+
+  @media @tablet {
+    font-size: 60px;
+    text-align: left;
+    margin-bottom: 30px;
+    width: auto;
+  }
+
+
+
+}
+
+.promo__text {
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  width: 280px;
+
+  @media @tablet {
+    font-size: 20px;
+    text-align: left;
+    width: auto;
+    margin-bottom: 50px;
+  }
+}
+
+.promo__button {
+  margin-bottom: 22px;
+  margin-top: auto;
+  align-self: stretch;
+
+  @media @tablet {
+    margin-top: 0;
+    align-self: flex-start;
+    z-index: 1;
+  }
+
+  @media @desktop {
+
+  }
+}
