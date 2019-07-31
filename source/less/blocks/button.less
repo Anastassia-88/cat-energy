@@ -1,48 +1,30 @@
 .button {
   display: flex;
-  font-size: 16px;
-  height: 40px;
-  box-sizing: border-box;
-  text-transform: uppercase;
-  padding-left: 30px;
-  padding-right: 30px;
-
-  color: @white;
-  background-color: @btn-main-bg;
-
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  height: 40px;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  font-size: 16px;
+  color: @white;
+  text-transform: uppercase;
   text-decoration: none;
 
-
-
-
-
+  background-color: @btn-main-bg;
 
   &--big {
-
     @media @tablet {
       height: 52px;
+
       font-size: 20px;
     }
   }
 
-
-
-
-
-
-
   &--to-all {
     color: @gray--light;
+
     background-color: @gray--lightest;
   }
-
-
-
-
-
-
-
-
 }

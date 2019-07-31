@@ -1,13 +1,11 @@
-.form {
 
-
-}
 
 .form__intro {
-  color: @gray--dark;
-  text-transform: uppercase;
   margin: 0;
   margin-bottom: 40px;
+
+  color: @gray--dark;
+  text-transform: uppercase;
 
   @media @tablet {
     font-size: 20px;
@@ -15,18 +13,20 @@
 }
 
 .form__group {
-  border: none;
-  padding: 0;
-  margin: 0;
   position: relative;
 
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
   &--radio {
-    border: 1px solid @gray--lighten;
     box-sizing: border-box;
+
+    border: 1px solid @gray--lighten;
   }
 
   &--cat-data {
-
     @media @desktop {
       .form__list {
         display: flex;
@@ -52,12 +52,12 @@
 }
 
 .form__list {
-  list-style: none;
   margin: 0;
   padding: 0;
 
-  &--secondary {
+  list-style: none;
 
+  &--secondary {
     @media @tablet {
       display: flex;
       flex-wrap: wrap;
@@ -67,13 +67,14 @@
 
 .form__option {
   display: flex;
+  box-sizing: border-box;
   height: 45px;
   margin-bottom: 14px;
-  box-sizing: border-box;
 
   &--radio {
-    padding-left: 50px;
     position: relative;
+
+    padding-left: 50px;
 
     @media @tablet {
       padding-left: 88px;
@@ -82,13 +83,15 @@
     &::before {
       content: "";
       position: absolute;
+      top: 6px;
+      left: 0;
+
+      box-sizing: border-box;
       width: 34px;
       height: 34px;
-      border-radius: 50%;
-      box-sizing: border-box;
+
       border: 1px solid @gray--lighten;
-      left: 0;
-      top: 6px;
+      border-radius: 50%;
 
       @media @tablet {
         left: 27px;
@@ -101,8 +104,9 @@
   }
 
   &--checkbox {
-    padding-left: 50px;
     position: relative;
+
+    padding-left: 50px;
 
     @media @tablet {
       width: 50%;
@@ -115,12 +119,14 @@
     &::before {
       content: "";
       position: absolute;
+      top: 8px;
+      left: 0;
+
+      box-sizing: border-box;
       width: 30px;
       height: 30px;
-      box-sizing: border-box;
+
       border: 1px solid @gray--lighten;
-      left: 0;
-      top: 8px;
     }
   }
 
@@ -128,6 +134,7 @@
     display: flex;
     align-items: center;
     padding-right: 15px;
+
     font-size: 16px;
     color: @gray;
     text-transform: uppercase;
@@ -136,16 +143,24 @@
       font-size: 20px;
     }
   }
- }
+}
 
 .form__text {
   flex-grow: 1;
   box-sizing: border-box;
-
-  border: 1px solid @gray--lighten;
   margin: 0;
   padding: 0;
   padding-left: 15px;
+
+  font-size: 16px;
+  color: @gray--light;
+  text-transform: uppercase;
+
+  border: 1px solid @gray--lighten;
+
+  @media @tablet {
+    font-size: 20px;
+  }
 }
 
 ::placeholder {
@@ -172,13 +187,23 @@
   box-sizing: border-box;
   height: 150px;
   padding: 15px;
+
+  font-size: 16px;
+  color: @gray--light;
+  text-transform: uppercase;
+
   border-color: @gray--lighten;
+
+  @media @tablet {
+    font-size: 20px;
+  }
 }
 
 .form__container {
   @media @desktop {
     display: flex;
     justify-content: space-between;
+
     .form__group {
       width: 570px;
     }

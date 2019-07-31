@@ -1,12 +1,13 @@
 .header {
-  .container;
+  position: relative;
+
   display: flex;
   flex-direction: column;
-  position: relative;
   padding-top: 11px;
 
-  @media @tablet {
+  .container;
 
+  @media @tablet {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -23,19 +24,20 @@
 }
 
 .header__logo {
-  font-size: 0;
-  height: 39px;
   width: 191px;
+  height: 39px;
   margin-bottom: 15px;
 
+  font-size: 0;
+
   @media @tablet {
-    height: 59px;
     width: 174px;
+    height: 59px;
   }
 
   @media @desktop {
-    height: 60px;
     width: 203px;
+    height: 60px;
   }
 
 
@@ -49,18 +51,16 @@
 }
 
 .header__logo-image {
-  height: 39px;
   width: 191px;
+  height: 39px;
 
   @media @tablet {
-      height: 59px;
-      width: 174px;
+    width: 174px;
+    height: 59px;
   }
 
-    @media @desktop {
-        height: 60px;
-        width: 203px;
-    }
+  @media @desktop {
+    width: 203px;
+    height: 60px;
+  }
 }
-
-

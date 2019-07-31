@@ -4,22 +4,22 @@
 
 /* oswald-regular - latin_cyrillic */
 @font-face {
-  font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
-  src:
-    local("Oswald Regular"),
+  font-family: "Oswald";
+
+  src: local("Oswald Regular"),
     local("Oswald-Regular"),
     url("../fonts/oswaldregular.woff2") format("woff2"),
     url("../fonts/oswaldregular.woff") format("woff");
 }
 /* oswald-500 - latin_cyrillic */
 @font-face {
-  font-family: "Oswald";
   font-style: normal;
   font-weight: 500;
-  src:
-    local("Oswald Medium"),
+  font-family: "Oswald";
+
+  src: local("Oswald Medium"),
     local("Oswald-Medium"),
     url("../fonts/oswaldmedium.woff2") format("woff2"),
     url("../fonts/oswaldmedium.woff") format("woff");
@@ -43,22 +43,20 @@ img {
 }
 
 .visually-hidden:not(:focus):not(:active),
-input[type='checkbox'].visually-hidden,
-input[type='radio'].visually-hidden {
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
-
-  overflow: hidden;
-  clip: rect(0 0 0 0);
 
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
+  overflow: hidden;
 
   white-space: nowrap;
 
   border: 0;
 
-  -webkit-clip-path: inset(100%);
+  clip: rect(0 0 0 0);
   clip-path: inset(100%);
 }
