@@ -1,8 +1,14 @@
 .example {
+  .container-responsive;
+  padding-top: 33px;
+
   background-color: @gray--lightest;
+
 }
 
 .example__description {
+  font-size: 14px;
+  line-height: 18px;
   font-family: @font-secondary;
   color: @gray--light;
 }
@@ -10,14 +16,32 @@
 .example__stats {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 38px;
+
 }
 
 .example__stats-item {
+  position: relative;
+  margin: 0;
+
   dt {
+    position: absolute;
+
     font-size: 12px;
+    line-height: 1;
     font-family: @font-secondary;
+    text-align: center;
     color: @gray--light;
     text-transform: lowercase;
+    width: 87px;
+    box-sizing: border-box;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-87/2px);
+    padding: 0 5px;
+    background-color: @gray--lightest;
+    z-index: 10;
+
 
     @media @tablet {
       font-size: 14px;
@@ -25,9 +49,21 @@
   }
 
   dd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 124px;
+    height: 56px;
+    margin: 0;
+
     font-size: 24px;
+    line-height: 1;
     color: @gray--dark;
     text-transform: uppercase;
+
+    border: 1px solid @gray--lighten;
+    border-radius: 3px;
 
     @media @tablet {
       font-size: 30px;
@@ -35,21 +71,11 @@
   }
 }
 
-.example__toggle {
-  margin: 0;
-
-  font-size: 16px;
-  text-transform: uppercase;
-
-  @media @tablet {
-    font-size: 20px;
-  }
-}
-
 .example__image-container {
   position: relative;
   width: 311px;
   height: 232px;
+  margin: 0 auto;
 
   @media @tablet {
     width: 690px;
@@ -69,5 +95,46 @@
 
   &--after {
     z-index: 20;
+  }
+}
+
+.example__title {
+  display: block;
+
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 1;
+  color: @gray--dark;
+
+
+  @media @mobile {
+    width: auto;
+    margin: 0 0 36px;
+  }
+
+  @media @tablet {
+    font-size: 60px;
+  }
+}
+
+.example__text {
+  margin: 0 0 44px;
+
+  font-size: 14px;
+  text-align: center;
+  color: @gray--dark;
+  text-transform: uppercase;
+}
+
+.example__controls {
+  font-size: 16px;
+  text-transform: uppercase;
+  height: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media @tablet {
+    font-size: 20px;
   }
 }
