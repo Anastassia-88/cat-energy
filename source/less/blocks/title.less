@@ -1,18 +1,53 @@
 .title {
   font-weight: normal;
+  display: block;
+  background-color: @white;
   font-size: 36px;
   line-height: 1;
   color: @gray--dark;
+  .container-adaptive;
+
+  @media @mobile {
+    width: auto;
+    margin: 0 0 35px;
+  }
 
   @media @tablet {
     font-size: 60px;
   }
+}
 
-  &--secondary {
-    font-size: 24px;
+.title--secondary {
+  font-size: 24px;
+  padding: 0;
+  position: relative;
 
-    @media @tablet {
-      font-size: 36px;
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: @color-main;
+    height: 3px;
+    width: 100%;
+    top: 15px;
+    transform: translateX(24px);
+  }
+
+  @media @tablet {
+    font-size: 36px;
+    padding-left: 38px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: @color-main;
+      height: 3px;
+      width: 30px;
+      top: 15px;
+      left: -30px;
+    }
+
+    &::after {
+      transform: translateX(35px);
     }
   }
 }

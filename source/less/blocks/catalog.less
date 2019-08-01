@@ -1,11 +1,20 @@
 .catalog {
   display: flex;
   flex-direction: column;
-
-  border-top: 1px solid #ededed;
-
-  .container-responsive;
+  border-bottom: 1px solid #ededed;
   .container-adaptive;
+
+
+  @media @mobile {
+    width: auto;
+    margin: 0 0 30px;
+    padding: 0;
+
+    &--secondary {
+      margin: 0 20px 39px;
+      border-color: @gray--lighten;
+    }
+  }
 
   @media @tablet {
     flex-direction: row;
@@ -18,10 +27,6 @@
   @media @desktop {
     justify-content: space-between;
   }
-
-  &--secondary {
-    flex-direction: column;
-  }
 }
 
 .catalog__item {
@@ -31,9 +36,10 @@
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 0 20px 25px 20px;
+  padding: 0 20px;
+  margin-bottom: 25px;
 
-  border-bottom: 1px solid #ededed;
+  border-top: 1px solid #ededed;
 
 
   @media @tablet {
@@ -64,7 +70,7 @@
   }
 
   &--to-all {
-    padding: 80px 0 25px;
+    padding: 80px 20px 25px;
 
     background-color: @white;
 
@@ -88,12 +94,17 @@
   }
 
   &--secondary {
-    width: auto;
-    margin: 0;
-    padding: 0;
+    @media @mobile {
+      padding: 0;
+      margin: 0 0 17px;
+      border-color: @gray--lighten;
+    }
 
-    background-color: @white;
-    border: 1px solid #ededed;
+    @media @tablet {
+      background-color: @white;
+    }
+
+
   }
 }
 
@@ -107,7 +118,13 @@
   flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
-  padding: 25px 0 0;
+  padding: 23px 0 0;
+  margin-bottom: 20px;
+
+  &--secondary {
+    padding-top: 13px;
+    margin-bottom: 13px;
+  }
 }
 
 .catalog__title {
@@ -124,6 +141,10 @@
 
     text-align: center;
   }
+}
+
+.catalog__image-link {
+  line-height: 0;
 }
 
 .catalog__link {
@@ -164,16 +185,17 @@
 }
 
 .catalog__features-list {
-  margin-bottom: 20px;
-
   font-size: 12px;
+  line-height: 16px;
   font-family: @font-secondary;
+  border-collapse: collapse;
+
+  color: @gray--light;
 }
 
 .catalog__features-item {
   display: flex;
   justify-content: space-between;
-
 
   th {
     padding: 0;
@@ -192,4 +214,5 @@
   font-size: 12px;
   font-family: @font-secondary;
   text-align: center;
+  color: @gray--light;
 }

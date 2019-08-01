@@ -17,6 +17,7 @@
 
 .features__item {
   position: relative;
+  box-sizing: border-box;
 
   min-height: 60px;
   margin-bottom: 20px;
@@ -38,10 +39,16 @@
     background-color: @color-main;
     background-repeat: no-repeat;
     background-position: center center;
+
+    @media @tablet {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--nutrients::before {
     background-image: url("../img/advantage-leaf@1x.png");
+    background-size: 26px 29px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/advantage-leaf@2x.png");
@@ -73,6 +80,12 @@
   }
 
   @media @tablet {
+    width: 50%;
+    padding-top: 115px;
+
+  }
+
+  @media @desktop {
     width: 25%;
   }
 }
