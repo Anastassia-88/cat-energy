@@ -1,149 +1,169 @@
 .promo {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   box-sizing: border-box;
   height: 500px;
   padding: 25px 20px 0;
-  position: relative;
 
+  color: @white;
 
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 320px 305px;
 
-  color: @white;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 
 
   @media @tablet {
-    background: none;
-    color: @gray--dark;
     flex-grow: 1;
-    padding-top: 45px;
-    margin-bottom: 0;
-    height: 865px;
     align-items: stretch;
+    height: 865px;
+    margin-bottom: 0;
+    padding-top: 45px;
     padding-left: 120px;
+
+    color: @gray--dark;
+
+    background: none;
   }
 
   @media @desktop {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: -1;
+
+    width: 1250px;
+    padding-top: 226px;
+    padding-right: 800px;
+    padding-left: 0;
+
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 720px 696px;
-    z-index: -1;
-    width: 1250px;
-    padding-top: 226px;
-    padding-left: 0;
-    padding-right: 800px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-desktop@2x.jpg");
+    }
   }
 
   @media @mobile {
     &::before {
       content: "";
-      height: 305px;
-      width: 100vw;
       position: absolute;
-      background-color: #63a837;
       top: 0;
       z-index: -1;
 
+      width: 100vw;
+      height: 305px;
 
+      background-color: #63a837;
     }
   }
-
-
-
-
-
-
-
 
   &::after {
     content: "";
     position: absolute;
-    width: 280px;
-    height: 270px;
     top: 168px;
     left: 50%;
-    transform: translateX(-140px);
+
+    width: 280px;
+    height: 270px;
+
     background-image: url("../img/index-can-mobile@1x.png");
     background-repeat: no-repeat;
     background-size: 280px 270px;
+    transform: translateX(-140px);
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-can-mobile@2x.png");
+    }
 
     @media @tablet {
       top: 243px;
-      background-image: url("../img/index-can-tablet@1x.jpg");
+      left: 50%;
+
       width: 709px;
       height: 609px;
+
+      background-image: url("../img/index-can-tablet@1x.jpg");
       background-size: 709px 609px;
-      left: 50%;
       transform: translateX(-355px);
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-can-tablet@2x.jpg");
+      }
     }
 
     @media @desktop {
-      background-image: url("../img/index-can-desktop@1x.png");
+      top: 142px;
+      right: 328px;
+      left: auto;
+
       width: 552px;
       height: 499px;
+
+      background-image: url("../img/index-can-desktop@1x.png");
       background-size: 552px 499px;
-      top: 142px;
-      left: auto;
-      right: 328px;
       transform: none;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-can-desktop@2x.png");
+      }
     }
   }
 }
 
 .promo__title {
-  font-size: 36px;
-  font-weight: normal;
-  line-height: 1;
-  margin: 0 0 19px;
-  text-align: center;
   width: 280px;
+  margin: 0 0 19px;
+
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 1;
+  text-align: center;
 
   @media @tablet {
+    width: auto;
+    margin-bottom: 30px;
+
     font-size: 60px;
     text-align: left;
-    margin-bottom: 30px;
-    width: auto;
   }
-
-
-
 }
 
 .promo__text {
-  text-transform: uppercase;
-  margin: 0;
-  text-align: center;
   width: 280px;
+  margin: 0;
+
+  text-align: center;
+  text-transform: uppercase;
 
   @media @tablet {
-    font-size: 20px;
-    text-align: left;
     width: auto;
     margin-bottom: 50px;
+
+    font-size: 20px;
+    text-align: left;
   }
 }
 
 .promo__button {
-  margin-bottom: 22px;
-  margin-top: auto;
   align-self: stretch;
+  margin-top: auto;
+  margin-bottom: 22px;
 
   @media @tablet {
-    margin-top: 0;
-    align-self: flex-start;
     z-index: 1;
-  }
 
-  @media @desktop {
-
+    align-self: flex-start;
+    margin-top: 0;
   }
 }

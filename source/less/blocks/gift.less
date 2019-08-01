@@ -1,60 +1,85 @@
 .gift {
   position: relative;
+
   box-sizing: border-box;
   height: 289px;
+  width: 280px;
   padding: 190px 60px 0;
+  margin: 39px auto 0;
+
   background-color: #63a837;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: 280px 289px;
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+
   @media @tablet {
-    background-image: url("../img/gift-photo-tablet@1x.jpg");
-    background-size: 708px 200px;
+    width: 708px;
     height: 200px;
     padding: 75px 120px 20px 420px;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-size: 708px 200px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   @media @desktop {
-    height: 289px;
     width: 245px;
+    height: 289px;
+    padding: 190px 40px 0;
+    margin: 0 110px 0 80px;
+
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-size: 245px 289px;
-    padding: 190px 40px 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 
   &::before {
     content: "";
     position: absolute;
+    top: 65px;
+    left: 50%;
+
     width: 56px;
     height: 61px;
+
     background-image: url("../img/icon-gift.svg");
     background-repeat: no-repeat;
-    left: 50%;
     transform: translateX(-28px);
-    top: 65px;
 
     @media @tablet {
-      left: 91px;
       top: 65px;
+      left: 91px;
+
       transform: none;
     }
 
     @media @desktop {
-      left: 50%;
-      transform: translateX(-28px);
       top: 65px;
+      left: 50%;
+
+      transform: translateX(-28px);
     }
   }
 }
 
 .gift__title {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
   margin: 0;
-  color: @white;
+
+  font-weight: normal;
+  font-size: 16px;
+  font-family: @font-secondary;
   text-align: center;
+  color: @white;
 
   @media @tablet {
     text-align: left;
