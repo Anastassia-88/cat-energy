@@ -22,32 +22,13 @@
   padding: 0;
   position: relative;
 
-  &::after {
-    content: "";
-    position: absolute;
-    background-color: @color-main;
-    height: 3px;
-    width: 100%;
-    top: 15px;
-    transform: translateX(24px);
-  }
+
 
   @media @tablet {
     font-size: 36px;
     padding-left: 38px;
 
-    &::before {
-      content: "";
-      position: absolute;
-      background-color: @color-main;
-      height: 3px;
-      width: 30px;
-      top: 15px;
-      left: -30px;
-    }
 
-    &::after {
-      transform: translateX(35px);
-    }
+
   }
 }
