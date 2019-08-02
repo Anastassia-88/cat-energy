@@ -131,12 +131,15 @@
         <picture>
           <source media = "(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
           <source media = "(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-          <img class="example__image example__image--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фото после">
+          <img class="example__image example__image--after hide" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фото после">
         </picture>
       </div>
       <div class="example__controls">
         <span>Было</span>
-        <span class="example__toggle-container"></span>
+        <span class="example__toggle-container">
+          <span class="example__control-before"></span>
+          <span class="example__control-after hide"></span>
+        </span>
         <span>Стало</span>
       </div>
   </section>

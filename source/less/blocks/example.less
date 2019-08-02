@@ -1,9 +1,9 @@
 .example {
-  .container-responsive;
   padding-top: 33px;
 
   background-color: @gray--lightest;
 
+  .container-responsive;
 }
 
 .example__description {
@@ -17,15 +17,22 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 38px;
-
 }
 
 .example__stats-item {
   position: relative;
+
   margin: 0;
 
   dt {
     position: absolute;
+    bottom: -12px;
+    left: 50%;
+    z-index: 10;
+
+    box-sizing: border-box;
+    width: 87px;
+    padding: 0 5px;
 
     font-size: 12px;
     line-height: 1;
@@ -33,14 +40,9 @@
     text-align: center;
     color: @gray--light;
     text-transform: lowercase;
-    width: 87px;
-    box-sizing: border-box;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-87/2px);
-    padding: 0 5px;
+
     background-color: @gray--lightest;
-    z-index: 10;
+    transform: translateX(-87/2px);
 
 
     @media @tablet {
@@ -73,6 +75,7 @@
 
 .example__image-container {
   position: relative;
+
   width: 311px;
   height: 232px;
   margin: 0 auto;
@@ -90,12 +93,11 @@
   height: 100%;
 
   &--before {
-    z-index: 10;
+
   }
 
   &--after {
-    z-index: 20;
-    display: none;
+
   }
 }
 
@@ -128,12 +130,13 @@
 }
 
 .example__controls {
-  font-size: 16px;
-  text-transform: uppercase;
-  height: 88px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 88px;
+
+  font-size: 16px;
+  text-transform: uppercase;
 
   @media @tablet {
     font-size: 20px;
@@ -141,33 +144,35 @@
 }
 
 .example__toggle-container {
+  position: relative;
+
+  box-sizing: border-box;
   width: 84px;
   height: 14px;
+  margin: 0 18px;
+
+  background-color: @white;
   border: 1px solid @gray--lighten;
   border-radius: 6px;
-  margin: 0 18px;
-  box-sizing: border-box;
-  background-color: @white;
-  position: relative;
 }
 
-.example__toggle-container::after,
-.example__toggle-container::before {
+.example__control-before,
+.example__control-after {
   content: "";
   position: absolute;
+  top: 3px;
+
   width: 35px;
   height: 6px;
+
   background-color: @color-main;
   border-radius: 3px;
-  top: 3px;
 }
 
-.example__toggle-container::before {
+.example__control-before {
   left: 5px;
 }
 
-.example__toggle-container::after {
+.example__control-after {
   right: 5px;
-  display: none;
 }
-
