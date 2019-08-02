@@ -13,14 +13,21 @@
 .programs__item {
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
   margin-bottom: 20px;
-  padding: 39px 20px 20px;
+  padding: 35px 20px 20px;
 
   background-color: @gray--lightest;
 
   @media @tablet {
     min-height: 372px;
     margin-bottom: 30px;
+    padding-top: 81px;
+    padding-bottom: 60px;
+    padding-left: 50px;
 
     &--slim {
       padding-right: 285px;
@@ -33,7 +40,7 @@
 
   @media @desktop {
     width: 570px;
-    padding: 81px 50px 20px;
+    padding-right: 50px;
   }
 
   &::before {
@@ -160,6 +167,7 @@
 
   @media @tablet {
     font-size: 16px;
+    line-height: 24px;
 
     border: none;
   }
@@ -175,23 +183,27 @@
   text-decoration: none;
 
   @media @tablet {
-    .programs__catalog-link {
-      font-size: 20px;
+    margin-top: auto;
 
-      border: none;
-    }
+    font-size: 20px;
+
+    border: none;
   }
 
   &::after {
     content: "";
     position: absolute;
-    top: 5px;
-    right: -37px;
+    top: 2px;
+    left: 100px;
 
     width: 25px;
     height: 12px;
 
     background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
+
+    @media @tablet {
+      left: 125px;
+    }
   }
 }

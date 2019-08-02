@@ -47,7 +47,7 @@
   @media @tablet {
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 19px;
+    padding-top: 20px;
 
     border: none;
   }
@@ -71,15 +71,17 @@
   }
 
   @media @tablet {
-    margin-left: 40px;
+    height: 30px;
+    margin-left: 37px;
 
     font-weight: 400;
     font-size: 18px;
+    line-height: 1;
 
     border: none;
 
     &--active {
-      border-bottom: 2px solid #68b738;
+      border-bottom: 2px solid @color-main;
     }
   }
 
@@ -95,6 +97,8 @@
 
     color: inherit;
     text-decoration: none;
+
+    outline: none;
 
 
     &:hover {

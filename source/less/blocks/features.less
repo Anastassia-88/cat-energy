@@ -3,6 +3,10 @@
   padding-bottom: 22px;
 
   .container-responsive;
+
+  @media @tablet {
+    padding-top: 15px;
+  }
 }
 
 .features__list {
@@ -14,6 +18,7 @@
   @media @tablet {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -25,7 +30,8 @@
   margin-bottom: 20px;
   padding-left: 80px;
 
-  line-height: 1.29;
+  font-size: 14px;
+  line-height: 18px;
   font-family: @font-secondary;
   color: @gray--light;
 
@@ -82,8 +88,44 @@
   }
 
   @media @tablet {
-    width: 50%;
+    width: 45%;
+    height: 250px;
     padding-top: 115px;
+    padding-right: 80px;
+    padding-left: 0;
+    margin-bottom: 65px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -40px;
+      left: 120px;
+      z-index: -1;
+
+      font-size: 281px;
+      line-height: 1;
+      color: @gray--lightest;
+      font-family: @font-main;
+    }
+
+    &--nutrients::after {
+      content: "1";
+    }
+
+    &--powder::after {
+      content: "2";
+    }
+
+    &--food::after {
+      content: "3";
+    }
+
+    &--time::after {
+      content: "4";
+    }
   }
 
   @media @desktop {
@@ -93,18 +135,16 @@
 
 .features__title {
   display: block;
+  width: auto;
+  margin: 0 0 36px;
 
   font-weight: normal;
   font-size: 36px;
   line-height: 1;
   color: @gray--dark;
 
-  @media @mobile {
-    width: auto;
-    margin: 0 0 36px;
-  }
-
   @media @tablet {
     font-size: 60px;
+    margin-bottom: 72px;
   }
 }
