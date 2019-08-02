@@ -15,3 +15,15 @@ navToggle.addEventListener('click', function() {
 });
 
 // Before - After
+var toggleContainer = document.querySelector(".example__toggle-container");
+var imageBefore = document.querySelector(".example__image--before");
+var imageAfter = document.querySelector(".example__image--after");
+var controlBefore = document.querySelector(".example__toggle-container::before");
+var controlAfter = document.querySelector(".example__toggle-container::after");
+
+toggleContainer.addEventListener("click", function () {
+  imageBefore.style.display = imageBefore.style.display === "none" ? "" : "none";
+  imageAfter.style.display = imageAfter.style.display === "none" ? "" : "none";
+  controlBefore.style.display = controlBefore.style.display === "none" ? "" : "none";
+  controlAfter.style.display = controlAfter.style.display === "none" ? "" : "none";
+});
