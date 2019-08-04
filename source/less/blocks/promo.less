@@ -37,7 +37,6 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-720px);
     z-index: -1;
 
     width: 1440px;
@@ -46,13 +45,29 @@
     padding-right: 650px;
     padding-left: 190px;
 
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 720px top;
-    background-size: 720px 696px;
+    transform: translateX(-720px);
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/index-background-desktop@2x.jpg");
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: -1;
+
+      width: 100vw;
+      height: 696px;
+
+      background-color: #63a837;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 720px 696px;
+
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 
@@ -105,8 +120,8 @@
     }
 
     @media @desktop {
-      left: 560px;
       top: 142px;
+      left: 560px;
 
       width: 552px;
       height: 499px;
