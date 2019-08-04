@@ -26,8 +26,7 @@
     align-items: stretch;
     height: 852px;
     margin-bottom: 0;
-    padding-top: 40px;
-    padding-left: 90px;
+    padding: 40px 90px 0;
 
     color: @gray--dark;
 
@@ -37,13 +36,15 @@
   @media @desktop {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-720px);
     z-index: -1;
 
-    width: 1300px;
+    width: 1440px;
+    height: 696px;
     padding-top: 226px;
     padding-right: 650px;
-    padding-left: 120px;
+    padding-left: 190px;
 
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
@@ -104,9 +105,8 @@
     }
 
     @media @desktop {
+      left: 560px;
       top: 142px;
-      right: 328px;
-      left: auto;
 
       width: 552px;
       height: 499px;
