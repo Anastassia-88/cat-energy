@@ -1,4 +1,6 @@
 .example {
+  position: relative;
+
   padding-top: 33px;
 
   background-color: @gray--lightest;
@@ -10,6 +12,29 @@
 
     background-color: @white;
     border-top: 1px solid #e7e7e7;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      z-index: 10;
+
+      width: 50vw;
+      height: 462px;
+    }
+
+    &::before {
+      right: 50%;
+
+      background-color: @gray--lightest;
+    }
+
+    &::after {
+      left: 50%;
+
+      background-color: #eaeaea;
+    }
   }
 }
 
@@ -67,13 +92,16 @@
     }
 
     @media @tablet {
-      width: 142px;
-      left: 81px;
-      padding: 0 5px;
       bottom: -7px;
+      left: 81px;
+
+      width: 142px;
+      padding: 0 5px;
+
       font-size: 14px;
-      transform: translateX(-142/2px);
+
       background-color: @white;
+      transform: translateX(-142/2px);
     }
   }
 
@@ -119,6 +147,7 @@
 
 .example__image {
   position: absolute;
+  z-index: 20;
 
   width: 100%;
   height: 100%;
@@ -173,7 +202,15 @@
   text-transform: uppercase;
 
   @media @tablet {
+    height: 114px;
+
     font-size: 20px;
+
+    background-color: transparent;
+  }
+
+  span {
+    z-index: 20;
   }
 }
 
