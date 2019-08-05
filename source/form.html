@@ -82,17 +82,15 @@
   </nav>
 </header>
 
-<main class="main container-responsive">
-
-  <h1 class="title">Подбор программы</h1>
-
+<main>
   <form action="https://echo.htmlacademy.ru" class="form" method="post">
+    <h1 class="form__main-title">Подбор программы</h1>
     <p class="form__intro">
       Заполните анкету и мы подберем<br>
       программу питания для вашего кота
     </p>
-
     <div class="form__container">
+
       <fieldset class="form__group form__group--cat-data">
         <legend class="visually-hidden">Данные кота</legend>
         <ul class="form__list">
@@ -115,7 +113,7 @@
         <legend class="visually-hidden">Цель</legend>
         <ul class="form__list">
           <li class="form__option form__option--radio">
-            <input class="visually-hidden form__radio" id="lose-weight" name="target" type="radio">
+            <input class="visually-hidden form__radio" id="lose-weight" name="target" type="radio" checked>
             <label for="lose-weight">Похудение</label>
           </li>
           <li class="form__option form__option--radio">
@@ -159,7 +157,7 @@
       <legend class="form__title">Дополнительно</legend>
       <ul class="form__list form__list--secondary">
         <li class="form__option form__option--checkbox">
-          <input class="visually-hidden form__checkbox" id="sweetener" name="sweetener" type="checkbox">
+          <input class="visually-hidden form__checkbox" id="sweetener" name="sweetener" type="checkbox" checked>
           <label for="sweetener">Сахарозаменитель</label>
         </li>
         <li class="form__option form__option--checkbox">

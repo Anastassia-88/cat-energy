@@ -62,8 +62,10 @@
 
   border-bottom: 1px solid @gray--lightest;
 
-  &:first-of-type {
-    border-top: 1px solid @gray--lightest;
+  @media @mobile {
+    &:first-of-type {
+      border-top: 1px solid @gray--lightest;
+    }
   }
 
   @media @tablet {
