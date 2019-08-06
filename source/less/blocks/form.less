@@ -126,14 +126,14 @@
 }
 
 .form__option {
+  position: relative;
+
   display: flex;
   box-sizing: border-box;
   height: 45px;
   margin-bottom: 14px;
 
   &--radio {
-    position: relative;
-
     padding-left: 50px;
 
     @media @tablet {
@@ -146,8 +146,6 @@
   }
 
   &--checkbox {
-    position: relative;
-
     padding-left: 50px;
 
     @media @tablet {
@@ -172,6 +170,10 @@
       font-size: 20px;
     }
   }
+
+  @media @tablet {
+    height: 52px;
+  }
 }
 
 .form__checkbox + label::before {
@@ -187,7 +189,7 @@
   border: 1px solid @gray--lighten;
 
   @media @tablet {
-    top: 2.5px;
+    top: 6px;
     left: 0;
 
     width: 40px;
@@ -224,6 +226,7 @@
 
   @media @tablet {
     left: 15px;
+    top: 13.5px
   }
 }
 
@@ -239,10 +242,9 @@
 
   border: 1px solid @gray--lighten;
   border-radius: 50%;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
 
   @media @tablet {
-    top: 2.5px;
+    top: 6px;
     left: 27px;
 
     width: 40px;
@@ -251,12 +253,19 @@
 }
 
 .form__radio:hover + label::before {
-  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+  border-color: #bababa;
 }
 
 .form__radio:active + label::before {
-  border: 2px solid @color-main;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+  opacity: 0.3;
+}
+
+.form__radio:active + label {
+  opacity: 0.3;
+}
+
+.form__radio:active + label::after {
+  opacity: 0.3;
 }
 
 .form__radio:checked + label::after {
@@ -272,7 +281,7 @@
   border-radius: 50%;
 
   @media @tablet {
-    top: 13.5px;
+    top: 17px;
     left: 38px;
 
     width: 18px;
@@ -288,13 +297,37 @@
   padding-left: 15px;
 
   font-size: 16px;
-  color: @gray--light;
-  text-transform: uppercase;
-
-  border: 1px solid @gray--lighten;
 
   @media @tablet {
     font-size: 20px;
+  }
+
+  color: @gray--light;
+  text-transform: uppercase;
+
+  border: 1px solid rgba(205, 205, 205, 0.5);
+
+  &:hover {
+    border-color: @gray--lighten;
+    outline: none;
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid @gray--light;
+    outline: none;
+
+    + svg {
+      fill: @color-main;
+    }
+  }
+
+  &:invalid {
+    border: 2px solid #ff8282;
+
+    + svg {
+      fill: #ff8282;
+    }
   }
 }
 
@@ -327,9 +360,46 @@
   color: @gray--light;
   text-transform: uppercase;
 
-  border-color: @gray--lighten;
+  border: 1px solid rgba(205, 205, 205, 0.5);
 
   @media @tablet {
     font-size: 20px;
+    height: 174px;
+  }
+
+  &:hover {
+    border-color: @gray--lighten;
+    outline: none;
+  }
+
+  &:active,
+  &:focus {
+    border: 2px solid @gray--light;
+    outline: none;
   }
 }
+
+.form__email-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  fill: @gray;
+
+  @media @tablet {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.form__tel-icon {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  fill: @gray;
+
+  @media @tablet {
+    top: 17px;
+    right: 17px;
+  }
+}
+
