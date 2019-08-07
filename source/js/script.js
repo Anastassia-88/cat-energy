@@ -15,3 +15,15 @@ navToggle.addEventListener('click', function() {
 });
 
 // Before - After
+var toggleContainer = document.querySelector(".example__toggle-container");
+var imageBefore = document.querySelector(".example__image--before");
+var imageAfter = document.querySelector(".example__image--after");
+var controlBefore = document.querySelector(".example__control-before");
+var controlAfter = document.querySelector(".example__control-after");
+
+toggleContainer.addEventListener("click", function () {
+  imageBefore.classList.toggle("hide");
+  imageAfter.classList.toggle("hide");
+  controlBefore.classList.toggle("hide");
+  controlAfter.classList.toggle("hide");
+});

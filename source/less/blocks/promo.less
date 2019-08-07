@@ -5,8 +5,9 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  height: 500px;
-  padding: 25px 20px 0;
+  height: 480px;
+  margin-bottom: 22px;
+  padding: 25px 0 0;
 
   color: @white;
 
@@ -23,10 +24,9 @@
   @media @tablet {
     flex-grow: 1;
     align-items: stretch;
-    height: 865px;
+    height: 852px;
     margin-bottom: 0;
-    padding-top: 45px;
-    padding-left: 120px;
+    padding: 40px 90px 0;
 
     color: @gray--dark;
 
@@ -36,21 +36,37 @@
   @media @desktop {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 50%;
     z-index: -1;
 
-    width: 1250px;
+    width: 1440px;
+    height: 696px;
     padding-top: 226px;
-    padding-right: 800px;
-    padding-left: 0;
+    padding-right: 650px;
+    padding-left: 190px;
 
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: 720px 696px;
+    transform: translateX(-720px);
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/index-background-desktop@2x.jpg");
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      width: 100vw;
+      height: 696px;
+
+      background-color: #63a837;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 720px 696px;
+
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 
@@ -104,8 +120,7 @@
 
     @media @desktop {
       top: 142px;
-      right: 328px;
-      left: auto;
+      left: 560px;
 
       width: 552px;
       height: 499px;
@@ -123,7 +138,7 @@
 
 .promo__title {
   width: 280px;
-  margin: 0 0 19px;
+  margin: 0 0 22px;
 
   font-weight: normal;
   font-size: 36px;
@@ -132,10 +147,14 @@
 
   @media @tablet {
     width: auto;
-    margin-bottom: 30px;
+    margin-bottom: 45px;
 
     font-size: 60px;
     text-align: left;
+  }
+
+  @media @desktop {
+    margin-bottom: 40px;
   }
 }
 
@@ -143,12 +162,14 @@
   width: 280px;
   margin: 0;
 
+  font-size: 14px;
+  line-height: 1;
   text-align: center;
   text-transform: uppercase;
 
   @media @tablet {
     width: auto;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
 
     font-size: 20px;
     text-align: left;
@@ -158,12 +179,17 @@
 .promo__button {
   align-self: stretch;
   margin-top: auto;
-  margin-bottom: 22px;
+
+  font-size: 16px;
 
   @media @tablet {
     z-index: 1;
 
     align-self: flex-start;
+    width: 245px;
+    height: 52px;
     margin-top: 0;
+
+    font-size: 20px;
   }
 }

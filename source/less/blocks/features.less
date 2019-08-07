@@ -1,6 +1,17 @@
 .features {
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 22px;
+
+  .container-responsive;
+
+  @media @tablet {
+    padding-top: 15px;
+    padding-bottom: 0;
+  }
+
+  @media @desktop {
+    padding-top: 45px;
+  }
 }
 
 .features__list {
@@ -12,18 +23,26 @@
   @media @tablet {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    height: 603px;
+    margin: 0;
+  }
+
+  @media @desktop {
+    height: 255px;
   }
 }
 
 .features__item {
   position: relative;
-  box-sizing: border-box;
 
+  box-sizing: border-box;
   min-height: 60px;
   margin-bottom: 20px;
   padding-left: 80px;
 
-  line-height: 1.29;
+  font-size: 14px;
+  line-height: 18px;
   font-family: @font-secondary;
   color: @gray--light;
 
@@ -39,6 +58,7 @@
     background-color: @color-main;
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: 50px 50px;
 
     @media @tablet {
       width: 80px;
@@ -48,7 +68,6 @@
 
   &--nutrients::before {
     background-image: url("../img/advantage-leaf@1x.png");
-    background-size: 26px 29px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/advantage-leaf@2x.png");
@@ -80,12 +99,66 @@
   }
 
   @media @tablet {
-    width: 50%;
+    width: 45%;
+    margin-bottom: 0;
+    //height: 320px;
     padding-top: 115px;
+    padding-right: 10%;
+    padding-left: 0;
 
+    font-size: 16px;
+    line-height: 24px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -40px;
+      left: 120px;
+      z-index: -1;
+
+      font-size: 281px;
+      line-height: 1;
+      font-family: @font-main;
+      color: @gray--lightest;
+    }
+
+    &--nutrients::after {
+      content: "1";
+    }
+
+    &--powder::after {
+      content: "2";
+    }
+
+    &--food::after {
+      content: "3";
+    }
+
+    &--time::after {
+      content: "4";
+    }
   }
 
   @media @desktop {
-    width: 25%;
+    width: 250px;
+    padding-top: 110px;
+    padding-right: 0;
+  }
+}
+
+.features__title {
+  display: block;
+  width: auto;
+  margin: 0 0 36px;
+
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 1;
+  color: @gray--dark;
+
+  @media @tablet {
+    margin-bottom: 72px;
+
+    font-size: 60px;
   }
 }
