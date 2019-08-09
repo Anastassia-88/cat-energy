@@ -1,3 +1,5 @@
+"use strict"
+
 // Main Navigation
 var navMain = document.querySelector(".main-nav");
 var navToggle = navMain.querySelector(".main-nav__toggle");
