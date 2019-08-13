@@ -16,8 +16,8 @@ navToggle.addEventListener('click', function() {
 // Before - After
 var controlContainer = document.querySelector(".example__control-container");
 var imageContainer = document.querySelector(".example__image-container");
-var imageBefore = document.querySelector(".picture__image--before");
-var imageAfter = document.querySelector(".picture__image--after");
+var pictureBefore = document.querySelector(".example__picture--before");
+var pictureAfter = document.querySelector(".example__picture--after");
 var control = document.querySelector(".example__control");
 var textBefore = document.querySelector(".example__control-text--before");
 var textAfter = document.querySelector(".example__control-text--after");
@@ -60,30 +60,13 @@ document.addEventListener('mouseup', function () {
 }, false);
 
 exampleControls.addEventListener('mousemove', function (evt) {
-  var res = evt.pageX - this.offsetLeft - controlContainer.offsetLeft - controlContainer.offsetWidth / 2;
+  var res = evt.pageX - this.offsetLeft - controlContainer.offsetLeft;
 
-  if (flag && evt.pageX > 0) {
-    control.style.left = (controlContainer.offsetWidth / 2 + res) + "px";
+  if (flag && res >= 0 && res <= controlContainer.offsetWidth) {
+    control.style.left = res + "px";
+    pictureBefore.style.width = (100 * res / controlContainer.offsetWidth) + "%";
+    pictureAfter.style.width = (100 - 100 * res / controlContainer.offsetWidth) + "%";
   }
-  else if (flag && evt.pageX < 0) {
-    control.style.left = (controlContainer.offsetWidth / 2 - res) + "px";
-  }
-
-
-
-
-  // control.style.left = evt.pageX + "px";
-
-
-
-  // var res = evt.pageX - control.offsetLeft;
-  //
-  // if ((res > 0) && (res < imageContainer.offsetWidth)) {
-  //   control.style.left += res;
-  //   imageBefore.style.width = res + 'px';
-  //   imageAfter.style.width = res + 'px';
-  // }
-
 }, false);
 
 
