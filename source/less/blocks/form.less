@@ -206,7 +206,7 @@
   opacity: 0.3;
 }
 
-.form__checkbox:checked + label::after {
+.form__checkbox + label::after {
   content: "";
   position: absolute;
   top: 10px;
@@ -219,6 +219,9 @@
   border-right: 2px solid @color-main;
   border-bottom: 2px solid @color-main;
   transform: rotate(45deg);
+  opacity: 0;
+
+  transition-duration: 300ms;
 
   @media @tablet {
     top: 13.5px;
@@ -227,23 +230,7 @@
 }
 
 .form__checkbox:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-
-  box-sizing: border-box;
-  width: 12px;
-  height: 18px;
-
-  border-right: 2px solid @color-main;
-  border-bottom: 2px solid @color-main;
-  transform: rotate(45deg);
-
-  @media @tablet {
-    top: 13.5px;
-    left: 15px;
-  }
+  opacity: 1;
 }
 
 .form__radio + label::before {
@@ -280,11 +267,11 @@
   opacity: 0.3;
 }
 
-.form__radio:active + label::after {
-  opacity: 0.3;
-}
+//.form__radio:active + label::after {
+//  opacity: 0.3;
+//}
 
-.form__radio:checked + label::after {
+.form__radio + label::after {
   content: "";
   position: absolute;
   top: 16.5px;
@@ -295,6 +282,10 @@
 
   background-color: @color-main;
   border-radius: 50%;
+  opacity: 0;
+
+  transition-duration: 300ms;
+
 
   @media @tablet {
     top: 17px;
@@ -305,6 +296,10 @@
   }
 }
 
+.form__radio:checked + label::after {
+  opacity: 1;
+}
+
 .form__text {
   flex-grow: 1;
   box-sizing: border-box;
@@ -313,6 +308,7 @@
   padding-left: 15px;
 
   font-size: 16px;
+  font-family: inherit;
   color: @gray--light;
   text-transform: uppercase;
 
@@ -323,6 +319,8 @@
   }
 
   &:invalid:not(:placeholder-shown) {
+    padding-left: 14px;
+
     border: 2px solid #ff8282;
 
     + svg {
@@ -335,6 +333,8 @@
   }
 
   &:focus {
+    padding-left: 14px;
+
     border: 2px solid @gray--light;
     outline: none;
 
@@ -384,6 +384,7 @@
   padding: 15px;
 
   font-size: 16px;
+  font-family: inherit;
   color: @gray--light;
   text-transform: uppercase;
 
@@ -399,14 +400,15 @@
     border-color: @gray--lighten;
   }
 
-  &:active,
   &:focus {
+    padding: 14px;
+
     border: 2px solid @gray--light;
     outline: none;
   }
 }
 
-.form__email-icon {
+.form__icon-mail {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -419,7 +421,7 @@
   }
 }
 
-.form__tel-icon {
+.form__icon-phone {
   position: absolute;
   top: 13px;
   right: 13px;

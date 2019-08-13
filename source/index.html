@@ -2,9 +2,11 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cat Energy</title>
-  <link rel="stylesheet" href="css/normalize.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <script>
     // Picture element HTML5 shiv
@@ -135,7 +137,7 @@
       <p class="example__text">Затраты на питание: 15 000 руб.</p>
     </div>
     <div class="example__image-container">
-      <picture>
+      <picture class="example__picture example__picture--before">
         <source type="image/webp" media="(min-width: 1300px)"
                 srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)"
@@ -147,7 +149,7 @@
         <img class="example__image example__image--before" src="img/before-mobile@1x.png"
               srcset="img/before-mobile@2x.png 2x" alt="Фото до">
       </picture>
-      <picture>
+      <picture class="example__picture example__picture--after">
         <source type="image/webp" media="(min-width: 1300px)"
                 srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)"
@@ -156,17 +158,16 @@
 
         <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
         <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-        <img class="example__image example__image--after hide" src="img/after-mobile@1x.png"
+        <img class="example__image example__image--after" src="img/after-mobile@1x.png"
               srcset="img/after-mobile@2x.png 2x" alt="Фото после">
       </picture>
     </div>
     <div class="example__controls">
-      <span>Было</span>
-      <span class="example__toggle-container">
-          <span class="example__control-before"></span>
-          <span class="example__control-after hide"></span>
-        </span>
-      <span>Стало</span>
+      <span class="example__control-text example__control-text--before">Было</span>
+      <span class="example__control-container">
+          <span class="example__control"></span>
+      </span>
+      <span class="example__control-text example__control-text--after">Стало</span>
     </div>
   </section>
 </main>
@@ -194,7 +195,7 @@
         allowfullscreen></iframe>
     </div>
   </section>
-  <div class="footer__container footer__container--index">
+  <div class="footer__container">
     <a class="footer__logo" href="index.html">
       <img class="footer__logo-image" alt="logo" height="24" width="128" src="img/logo-footer.svg">
     </a>
@@ -228,6 +229,6 @@
     </div>
   </div>
 </footer>
-<script src="js/script.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

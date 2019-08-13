@@ -155,12 +155,51 @@
   }
 }
 
-.example__image {
+.example__picture {
   position: absolute;
-  z-index: 20;
+  top: 0;
 
   width: 100%;
   height: 100%;
+  overflow: hidden;
+
+  &--before {
+    left: 0;
+  }
+
+  &--after {
+    right: 0;
+  }
+
+  @media @tablet {
+    &--before {
+      z-index: 20;
+
+      width: 50%;
+    }
+
+    &--after {
+      z-index: 30;
+
+      width: 50%;
+    }
+  }
+}
+
+.example__image {
+  width: 311px;
+  height: 232px;
+
+  &--after {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  @media @tablet {
+    width: 690px;
+    height: 517px;
+  }
 }
 
 .example__title {
@@ -203,59 +242,96 @@
 }
 
 .example__controls {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 200px;
   height: 88px;
+  margin: 0 auto;
 
   font-size: 16px;
   text-transform: uppercase;
 
+
   @media @tablet {
+    width: 570px;
     height: 114px;
 
     font-size: 20px;
 
     background-color: transparent;
   }
-
-  span {
-    z-index: 20;
-  }
 }
 
-.example__toggle-container {
+.example__control-container {
   position: relative;
+  z-index: 20;
 
   box-sizing: border-box;
   width: 84px;
   height: 14px;
-  margin: 0 18px;
 
   background-color: @white;
   border: 1px solid @gray--lighten;
   border-radius: 6px;
+
+  @media @tablet {
+    width: 428px;
+    height: 6px;
+
+    background-color: #dcdcdc;
+    border: none;
+    border-radius: 2.5px;
+  }
 }
 
-.example__control-before,
-.example__control-after {
+.example__control {
   content: "";
   position: absolute;
   top: 3px;
+  left: 5px;
 
   width: 35px;
   height: 6px;
 
   background-color: @color-main;
   border-radius: 3px;
-}
+  cursor: pointer;
 
-.example__control-before {
-  left: 5px;
-}
+  @media @mobile {
+    &--after {
+      right: 5px;
+      left: auto;
+    }
+  }
 
-.example__control-after {
-  right: 5px;
+  @media @tablet {
+    top: -14px;
+    left: 50%;
+
+    width: 34px;
+    height: 34px;
+
+    background-color: @white;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    transform: translateX(-17px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 13px;
+      left: 13px;
+
+      width: 8px;
+      height: 8px;
+
+      background-color: @color-main;
+      border-radius: 50%;
+    }
+  }
 }
 
 .example__container {
@@ -263,5 +339,20 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 86px;
+  }
+}
+
+.example__control-text {
+  position: absolute;
+  z-index: 20;
+
+  cursor: pointer;
+
+  &--before {
+    left: 0;
+  }
+
+  &--after {
+    right: 0;
   }
 }
