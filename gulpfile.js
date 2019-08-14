@@ -66,15 +66,6 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-gulp.task("normalize", function () {
-  return gulp.src("source/css/normalize.css")
-    .pipe(plumber())
-    .pipe(csso())
-    .pipe(rename("normalize.min.css"))
-    .pipe(gulp.dest("build/css"))
-    .pipe(server.stream());
-});
-
 gulp.task("images", function () {
   return gulp.src("source/img/**/*{.png,jpg,svg}")
     .pipe(imagemin([
@@ -108,7 +99,6 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
-  "normalize",
   "sprite",
   "html",
   "js"

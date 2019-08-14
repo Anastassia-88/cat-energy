@@ -49,14 +49,10 @@ var exampleControls = document.querySelector(".example__controls");
 control.addEventListener('mousedown', function (evt) {
   evt.preventDefault();
   flag = true;
-  console.log("mousedown");
-  console.log(flag);
 }, false);
 
 document.addEventListener('mouseup', function () {
   flag = false;
-  console.log("mouseup");
-  console.log(flag);
 }, false);
 
 exampleControls.addEventListener('mousemove', function (evt) {
