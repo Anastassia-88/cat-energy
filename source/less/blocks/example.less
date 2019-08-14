@@ -159,30 +159,18 @@
   position: absolute;
   top: 0;
 
-  width: 100%;
+  width: 50%;
   height: 100%;
   overflow: hidden;
 
   &--before {
     left: 0;
+    z-index: 20;
   }
 
   &--after {
     right: 0;
-  }
-
-  @media @tablet {
-    &--before {
-      z-index: 20;
-
-      width: 50%;
-    }
-
-    &--after {
-      z-index: 30;
-
-      width: 50%;
-    }
+    z-index: 30;
   }
 }
 
