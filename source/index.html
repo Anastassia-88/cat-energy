@@ -9,37 +9,37 @@
   <link rel="stylesheet" href="css/style.min.css">
   <script src="js/picturefill.min.js" async></script>
 
-  <!--  &lt;!&ndash; Pixel Glass &ndash;&gt;-->
-  <!--  <style>-->
-  <!--    HTML {-->
-  <!--      background-repeat: no-repeat;-->
-  <!--      background-position: 50% 0;-->
-  <!--      /* По умолчанию мобильный макет */-->
-  <!--      background-image: url("../img/cat-energy-index-mobile.jpg");-->
-  <!--    }-->
+<!--    &lt;!&ndash; Pixel Glass &ndash;&gt;-->
+<!--    <style>-->
+<!--      HTML {-->
+<!--        background-repeat: no-repeat;-->
+<!--        background-position: 50% 0;-->
+<!--        /* По умолчанию мобильный макет */-->
+<!--        background-image: url("../img/cat-energy-index-mobile.jpg");-->
+<!--      }-->
 
-  <!--    /* Планшет */-->
-  <!--    @media (min-width: 768px) {-->
-  <!--      HTML {-->
-  <!--        /* Планшетный макет */-->
-  <!--        background-image: url("../img/cat-energy-index-tablet.jpg");-->
-  <!--      }-->
-  <!--    }-->
+<!--      /* Планшет */-->
+<!--      @media (min-width: 768px) {-->
+<!--        HTML {-->
+<!--          /* Планшетный макет */-->
+<!--          background-image: url("../img/cat-energy-index-tablet.jpg");-->
+<!--        }-->
+<!--      }-->
 
-  <!--    /* Десктоп */-->
-  <!--    @media (min-width: 1300px) {-->
-  <!--      HTML {-->
-  <!--        /* Десктопный макет */-->
-  <!--        background-image: url("../img/cat-energy-index-desktop.jpg");-->
-  <!--      }-->
-  <!--    }-->
+<!--      /* Десктоп */-->
+<!--      @media (min-width: 1300px) {-->
+<!--        HTML {-->
+<!--          /* Десктопный макет */-->
+<!--          background-image: url("../img/cat-energy-index-desktop.jpg");-->
+<!--        }-->
+<!--      }-->
 
-  <!--    BODY {-->
-  <!--      opacity: 0.5;-->
-  <!--    }-->
-  <!--  </style>-->
-  <!--  <link rel="stylesheet" href="css/style-pixel-glass.css">-->
-  <!--  <script src="js/script-pixel-glass.js"></script>-->
+<!--      BODY {-->
+<!--        opacity: 0.5;-->
+<!--      }-->
+<!--    </style>-->
+<!--    <link rel="stylesheet" href="css/style-pixel-glass.css">-->
+<!--    <script src="js/script-pixel-glass.min.js"></script>-->
 
 </head>
 <body>
@@ -112,58 +112,65 @@
   </section>
 
   <section class="example">
-    <h2 class="example__title">Живой пример</h2>
-    <p class="example__description">
-      Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat Energy Slim. Отличный
-      результат без изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих привычек и&nbsp;по-прежнему спит по&nbsp;16&nbsp;часов
-      в&nbsp;день.
-    </p>
-    <div class="example__container">
-      <div class="example__stats">
-        <dl class="example__stats-item">
-          <dt>Снижение веса</dt>
-          <dd>5&nbsp;кг</dd>
-        </dl>
-        <dl class="example__stats-item">
-          <dt>Затрачено времени</dt>
-          <dd>60&nbsp;дней</dd>
-        </dl>
+    <div class="example__content">
+      <div>
+        <h2 class="example__title">Живой пример</h2>
+        <p class="example__description">
+          Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat Energy Slim. Отличный
+          результат без изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих привычек и&nbsp;по-прежнему спит по&nbsp;16&nbsp;часов
+          в&nbsp;день.
+        </p>
+        <div class="example__stats-container">
+          <div class="example__stats">
+            <dl class="example__stats-item">
+              <dt>Снижение веса</dt>
+              <dd>5&nbsp;кг</dd>
+            </dl>
+            <dl class="example__stats-item">
+              <dt>Затрачено времени</dt>
+              <dd>60&nbsp;дней</dd>
+            </dl>
+          </div>
+          <p class="example__text">Затраты на питание: 15 000 руб.</p>
+        </div>
       </div>
-      <p class="example__text">Затраты на питание: 15 000 руб.</p>
-    </div>
-    <div class="example__image-container">
-      <picture class="example__picture example__picture--before">
-        <source type="image/webp" media="(min-width: 1300px)"
-                srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+      <div>
+        <div class="example__image-container">
+          <picture class="example__picture example__picture--before">
+            <source type="image/webp" media="(min-width: 1300px)"
+                    srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
 
-        <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-        <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-        <img class="example__image example__image--before" src="img/before-mobile@1x.png"
-              srcset="img/before-mobile@2x.png 2x" alt="Фото до">
-      </picture>
-      <picture class="example__picture example__picture--after">
-        <source type="image/webp" media="(min-width: 1300px)"
-                srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
-        <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+            <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+            <img class="example__image example__image--before" src="img/before-mobile@1x.png"
+                 srcset="img/before-mobile@2x.png 2x" alt="Фото до">
+          </picture>
+          <picture class="example__picture example__picture--after">
+            <source type="image/webp" media="(min-width: 1300px)"
+                    srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
 
-        <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-        <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-        <img class="example__image example__image--after" src="img/after-mobile@1x.png"
-              srcset="img/after-mobile@2x.png 2x" alt="Фото после">
-      </picture>
-    </div>
-    <div class="example__controls">
-      <span class="example__control-text example__control-text--before">Было</span>
-      <span class="example__control-container">
+            <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+            <img class="example__image example__image--after" src="img/after-mobile@1x.png"
+                 srcset="img/after-mobile@2x.png 2x" alt="Фото после">
+          </picture>
+        </div>
+        <div class="example__controls">
+          <span class="example__control-text example__control-text--before">Было</span>
+          <span class="example__control-container example__control-container--before">
           <span class="example__control"></span>
       </span>
-      <span class="example__control-text example__control-text--after">Стало</span>
+          <span class="example__control-text example__control-text--after">Стало</span>
+        </div>
+      </div>
     </div>
+
   </section>
 </main>
 

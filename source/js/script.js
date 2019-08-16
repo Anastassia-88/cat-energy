@@ -15,7 +15,6 @@ navToggle.addEventListener('click', function() {
 
 // Before - After
 var controlContainer = document.querySelector(".example__control-container");
-var imageContainer = document.querySelector(".example__image-container");
 var pictureBefore = document.querySelector(".example__picture--before");
 var pictureAfter = document.querySelector(".example__picture--after");
 var control = document.querySelector(".example__control");
@@ -23,21 +22,27 @@ var textBefore = document.querySelector(".example__control-text--before");
 var textAfter = document.querySelector(".example__control-text--after");
 var flag = false;
 var exampleControls = document.querySelector(".example__controls");
-//
-// controlContainer.addEventListener("click", function () {
-//   imageBefore.classList.toggle("hide");
-//   imageAfter.classList.toggle("hide");
-//   control.classList.toggle("example__control--after");
-// });
 
 textBefore.addEventListener("click", function () {
-pictureBefore.style.width = 100 + "%";
-pictureAfter.style.width = 0 + "%";
+  pictureBefore.style.width = 100 + "%";
+  pictureAfter.style.width = 0 + "%";
+  if (!controlContainer.classList.contains("example__control-container--before")) {
+    controlContainer.classList.add("example__control-container--before");
+  }
+  if (controlContainer.classList.contains("example__control-container--after")) {
+    controlContainer.classList.remove("example__control-container--after");
+  }
 });
 
 textAfter.addEventListener("click", function () {
-pictureBefore.style.width = 0 + "%";
-pictureAfter.style.width = 100 + "%";
+  pictureBefore.style.width = 0 + "%";
+  pictureAfter.style.width = 100 + "%";
+  if (!controlContainer.classList.contains("example__control-container--after")) {
+    controlContainer.classList.add("example__control-container--after");
+  }
+  if (controlContainer.classList.contains("example__control-container--before")) {
+    controlContainer.classList.remove("example__control-container--before");
+  }
 });
 
 control.addEventListener('mousedown', function (evt) {
@@ -58,16 +63,3 @@ exampleControls.addEventListener('mousemove', function (evt) {
     pictureAfter.style.width = (100 - 100 * res / controlContainer.offsetWidth) + "%";
   }
 }, false);
-
-
-
-
-
-
-
-
-
-
-
-
-
