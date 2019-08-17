@@ -81,9 +81,7 @@ document.addEventListener('touchend', function () {
 
 exampleControls.addEventListener('touchmove', function (evt) {
 
-  let res = evt.originalEvent.touches[0].pageX - example.offsetLeft - this.offsetLeft - controlContainer.offsetLeft;
-
-  console.log(evt.pageX); console.log(res);
+  let res = evt.touches[0].pageX - example.offsetLeft - this.offsetLeft - controlContainer.offsetLeft;
 
   if (flag && res >= 0 && res <= controlContainer.offsetWidth) {
     control.style.left = res + "px";
