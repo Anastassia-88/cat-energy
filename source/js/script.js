@@ -70,6 +70,7 @@ exampleControls.addEventListener('mousemove', function (evt) {
   }
 }, false);
 
+
 control.addEventListener('touchstart', function (evt) {
   evt.preventDefault();
   flag = true;
