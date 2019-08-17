@@ -23,6 +23,10 @@ var textAfter = document.querySelector(".example__control-text--after");
 var flag = false;
 var exampleControls = document.querySelector(".example__controls");
 
+var example = document.querySelector(".example");
+var exampleContent = document.querySelector(".example__content");
+
+
 textBefore.addEventListener("click", function () {
   pictureBefore.style.width = 100 + "%";
   pictureAfter.style.width = 0 + "%";
@@ -55,7 +59,10 @@ document.addEventListener('mouseup', function () {
 }, false);
 
 exampleControls.addEventListener('mousemove', function (evt) {
-  var res = evt.pageX - this.offsetLeft - controlContainer.offsetLeft;
+
+  var res = evt.pageX - example.offsetLeft - this.offsetLeft - controlContainer.offsetLeft;
+
+  console.log(res);
 
   if (flag && res >= 0 && res <= controlContainer.offsetWidth) {
     control.style.left = res + "px";
