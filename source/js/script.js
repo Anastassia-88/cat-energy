@@ -1,8 +1,8 @@
 "use strict";
 
 // Main Navigation
-var navMain = document.querySelector(".main-nav");
-var navToggle = navMain.querySelector(".main-nav__toggle");
+const navMain = document.querySelector(".main-nav");
+const navToggle = navMain.querySelector(".main-nav__toggle");
 
 navMain.classList.remove("main-nav--nojs");
 
@@ -14,22 +14,21 @@ navToggle.addEventListener('click', function() {
 
 
 // Before - After
-var controlContainer = document.querySelector(".example__control-container");
-var pictureBefore = document.querySelector(".example__picture--before");
-var pictureAfter = document.querySelector(".example__picture--after");
-var control = document.querySelector(".example__control");
-var textBefore = document.querySelector(".example__control-text--before");
-var textAfter = document.querySelector(".example__control-text--after");
-var flag = false;
-var exampleControls = document.querySelector(".example__controls");
-
-var example = document.querySelector(".example");
-var exampleContent = document.querySelector(".example__content");
+const controlContainer = document.querySelector(".example__control-container");
+const pictureBefore = document.querySelector(".example__picture--before");
+const pictureAfter = document.querySelector(".example__picture--after");
+const control = document.querySelector(".example__control");
+const textBefore = document.querySelector(".example__control-text--before");
+const textAfter = document.querySelector(".example__control-text--after");
+let flag = false;
+const exampleControls = document.querySelector(".example__controls");
+const example = document.querySelector(".example");
 
 
 textBefore.addEventListener("click", function () {
   pictureBefore.style.width = 100 + "%";
   pictureAfter.style.width = 0 + "%";
+  control.style.left = 0 + "px";
   if (!controlContainer.classList.contains("example__control-container--before")) {
     controlContainer.classList.add("example__control-container--before");
   }
@@ -41,6 +40,7 @@ textBefore.addEventListener("click", function () {
 textAfter.addEventListener("click", function () {
   pictureBefore.style.width = 0 + "%";
   pictureAfter.style.width = 100 + "%";
+  control.style.left = controlContainer.offsetWidth + "px";
   if (!controlContainer.classList.contains("example__control-container--after")) {
     controlContainer.classList.add("example__control-container--after");
   }
@@ -48,6 +48,7 @@ textAfter.addEventListener("click", function () {
     controlContainer.classList.remove("example__control-container--before");
   }
 });
+
 
 control.addEventListener('mousedown', function (evt) {
   evt.preventDefault();
@@ -60,9 +61,29 @@ document.addEventListener('mouseup', function () {
 
 exampleControls.addEventListener('mousemove', function (evt) {
 
-  var res = evt.pageX - example.offsetLeft - this.offsetLeft - controlContainer.offsetLeft;
+  let res = evt.pageX - example.offsetLeft - this.offsetLeft - controlContainer.offsetLeft;
 
-  console.log(res);
+  if (flag && res >= 0 && res <= controlContainer.offsetWidth) {
+    control.style.left = res + "px";
+    pictureBefore.style.width = (100 * res / controlContainer.offsetWidth) + "%";
+    pictureAfter.style.width = (100 - 100 * res / controlContainer.offsetWidth) + "%";
+  }
+}, false);
+
+control.addEventListener('touchstart', function (evt) {
+  evt.preventDefault();
+  flag = true;
+}, false);
+
+document.addEventListener('touchend', function () {
+  flag = false;
+}, false);
+
+exampleControls.addEventListener('touchmove', function (evt) {
+
+  let res = evt.originalEvent.touches[0].pageX - example.offsetLeft - this.offsetLeft - controlContainer.offsetLeft;
+
+  console.log(evt.pageX); console.log(res);
 
   if (flag && res >= 0 && res <= controlContainer.offsetWidth) {
     control.style.left = res + "px";

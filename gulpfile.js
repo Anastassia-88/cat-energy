@@ -1,29 +1,39 @@
 "use strict";
 
-var gulp = require("gulp");
-var plumber = require("gulp-plumber");
-var sourcemap = require("gulp-sourcemaps");
-var rename = require("gulp-rename");
-var less = require("gulp-less");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var csso = require("gulp-csso");
-var imagemin = require("gulp-imagemin");
-var webp = require("gulp-webp");
-var svgstore = require("gulp-svgstore");
-var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include");
-var htmlmin = require("gulp-htmlmin");
-var jsmin = require("gulp-uglify");
-var del = require("del");
-var server = require("browser-sync").create();
+const gulp = require("gulp");
+const plumber = require("gulp-plumber");
+const sourcemap = require("gulp-sourcemaps");
+const rename = require("gulp-rename");
+const less = require("gulp-less");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const csso = require("gulp-csso");
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
+const htmlmin = require("gulp-htmlmin");
+const jsmin = require("gulp-uglify");
+const del = require("del");
+const server = require("browser-sync").create();
+const ghPages = require("gh-pages");
+const path = require("path");
 
-//  Removes all files in the "build" folder
+
+
+// Publish website using GitHub pages: npx gulp deploy
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
+
+//  Remove all files in the "build" folder
 gulp.task("clean", function () {
   return del("build");
 });
 
-//  Copies files from the "source" folder to the "build" folder
+//  Copy files from the "source" folder to the "build" folder
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
@@ -35,14 +45,14 @@ gulp.task("copy", function () {
     .pipe(gulp.dest("build"));
 });
 
-//  Converts images in the "source" folder to WebP (npx gulp webp)
+//  Convert images in the "source" folder to WebP: npx gulp webp
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("source/img"));
 });
 
-//  Combines svg files into one with <symbol> elements
+//  Combine svg files into one with <symbol> elements
 gulp.task("sprite", function () {
   return gulp.src("source/img/sprite/*.svg")
     .pipe(svgstore({
@@ -52,7 +62,7 @@ gulp.task("sprite", function () {
     .pipe(gulp.dest("build/img"));
 });
 
-//  Prefixes CSS properties
+//  Prefix CSS properties
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
@@ -76,7 +86,7 @@ gulp.task("images", function () {
     .pipe(gulp.dest("source/img"));
 });
 
-//  Minifies HTML
+//  Minify HTML
 gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(posthtml([
@@ -86,7 +96,7 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
-//  Minifies JavaScript
+//  Minify JavaScript
 gulp.task("js", function () {
   return gulp.src("source/js/*.js")
     .pipe(jsmin())
