@@ -1,7 +1,7 @@
 .main-nav {
   color: @gray--dark;
 
-  @media @mobile {
+  @media @mobile-only {
     margin-right: -20px;
     margin-left: -20px;
   }
@@ -62,7 +62,7 @@
 
   border-bottom: 1px solid @gray--lightest;
 
-  @media @mobile {
+  @media @mobile-only {
     &:first-of-type {
       border-top: 1px solid @gray--lightest;
     }
@@ -113,7 +113,7 @@
   }
 }
 
-@media @mobile {
+@media @mobile-only {
   .main-nav--closed {
     .main-nav__item {
       display: none;

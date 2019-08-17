@@ -7,7 +7,6 @@
   margin: 39px auto 0;
   padding: 190px 60px 0;
 
-  background-color: #63a837;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: 280px 289px;
@@ -32,7 +31,8 @@
   @media @desktop {
     width: 245px;
     height: 289px;
-    margin: 0 110px 0 80px;
+    margin: 0;
+    margin-left: 80px;
     padding: 190px 40px 0;
 
     background-image: url("../img/gift-photo-desktop@1x.jpg");
@@ -87,5 +87,30 @@
 
   @media @desktop {
     text-align: center;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: -10;
+
+    width: 50vw;
+    height: 100%;
+
+    background-color: #63a837;
+
+    @media @desktop {
+      width: 122.5px;
+    }
+  }
+
+  &::before {
+    left: 50%;
+  }
+
+  &::after {
+    right: 50%;
   }
 }

@@ -107,7 +107,7 @@
 
     background-color: @gray--lightest;
 
-    @media @mobile {
+    @media @mobile-only {
       transform: translateX(-87/2px);
     }
 
@@ -181,7 +181,7 @@
     left: 0;
     z-index: 20;
 
-    @media @mobile {
+    @media @mobile-only {
       width: 100%;
     }
   }
@@ -190,7 +190,7 @@
     right: 0;
     z-index: 30;
 
-    @media @mobile {
+    @media @mobile-only {
       width: 0;
     }
   }
@@ -221,7 +221,7 @@
   color: @gray--dark;
 
 
-  @media @mobile {
+  @media @mobile-only {
     width: auto;
     margin: 0 0 36px;
   }
@@ -296,7 +296,7 @@
   border: 1px solid @gray--lighten;
   border-radius: 6px;
 
-  @media @mobile {
+  @media @mobile-only {
     &::before {
       content: "";
       position: absolute;
@@ -347,7 +347,7 @@
 }
 
 .example__control {
-  @media @mobile {
+  @media @mobile-only {
     display: none;
   }
 
