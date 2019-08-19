@@ -1,4 +1,5 @@
 .button {
+  font-family: @font-main;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +17,14 @@
   border: none;
   outline: none;
 
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   &--big {
     font-size: 16px;
 
@@ -30,5 +39,13 @@
     color: @gray--light;
 
     background-color: @gray--lightest;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 }
