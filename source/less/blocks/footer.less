@@ -3,10 +3,6 @@
   flex-direction: column;
 
   background-color: @gray--lightest;
-
-  &--index {
-    background-color: @white;
-  }
 }
 
 .footer__logo {
@@ -50,28 +46,5 @@
     justify-content: space-between;
     align-items: center;
     height: 150px;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-
-      width: 50vw;
-      height: 100%;
-
-      background-color: @gray--lightest;
-    }
-
-    &::before {
-      left: 50%;
-
-      transform: translateX(650px);
-    }
-
-    &::after {
-      right: 50%;
-
-      transform: translateX(-650px);
-    }
   }
 }
