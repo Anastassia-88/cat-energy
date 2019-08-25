@@ -356,6 +356,7 @@
     top: -14px;
     left: 50%;
 
+    box-sizing: border-box;
     width: 34px;
     height: 34px;
 
@@ -364,15 +365,14 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
     transform: translateX(-17px);
     cursor: pointer;
-    box-sizing: border-box;
 
     &:hover {
       box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
     }
 
     &:active {
-      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
       border: solid 2px @color-main;
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
 
       &::after {
         top: 11px;
@@ -432,5 +432,4 @@
       border: none;
     }
   }
-
 }
