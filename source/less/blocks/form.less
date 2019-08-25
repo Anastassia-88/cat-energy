@@ -3,6 +3,7 @@
 
   .container-responsive;
 
+
   @media @tablet {
     padding-top: 42px;
   }
@@ -63,7 +64,8 @@
   &--radio {
     box-sizing: border-box;
 
-    border: 1px solid @gray--lighten;
+    border: 1px solid rgba(205, 205, 205, 0.5);
+
   }
 }
 
@@ -105,9 +107,20 @@
 .form__title {
   font-size: 24px;
   color: @gray--dark;
+  position: relative;
 
   @media @tablet {
     font-size: 36px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    background-color: @color-main;
+    height: 5px;
+    top: 0;
+    left: 0;
   }
 }
 
