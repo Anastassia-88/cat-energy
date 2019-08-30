@@ -41,12 +41,14 @@
     &::before {
       right: auto;
       left: 0;
+
       width: 915px;
     }
 
     &::after {
-      left: auto;
       right: 0;
+      left: auto;
+
       width: 385px;
     }
   }
@@ -66,12 +68,13 @@
   position: relative;
   z-index: 20;
 
+  margin: 0;
+  margin-bottom: 25px;
+
   font-size: 14px;
   line-height: 18px;
   font-family: @font-secondary;
   color: @tundora;
-  margin: 0;
-  margin-bottom: 25px;
 
   @media @tablet {
     margin-bottom: 54px;
@@ -140,15 +143,15 @@
   }
 
   dd {
-    text-align: center;
-    padding-top: 12px;
     box-sizing: border-box;
     width: 124px;
     height: 56px;
     margin: 0;
+    padding-top: 12px;
 
     font-size: 24px;
     line-height: 1;
+    text-align: center;
     color: @cod-gray;
     text-transform: uppercase;
 
@@ -223,12 +226,12 @@
 
 .example__title {
   display: block;
+  margin: 0 0 35px;
 
   font-weight: normal;
   font-size: 36px;
   line-height: 1;
   color: @cod-gray;
-  margin: 0 0 35px;
 
 
   @media @tablet {
