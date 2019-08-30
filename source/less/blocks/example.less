@@ -3,13 +3,13 @@
 
   padding-top: 30px;
 
-  background-color: @gray--lightest;
+  background-color: @concrete;
 
   @media @tablet {
     padding-top: 43px;
 
     background-color: @white;
-    border-top: 1px solid #e7e7e7;
+    border-top: 1px solid @mercury;
 
     &::before,
     &::after {
@@ -25,13 +25,13 @@
     &::before {
       right: 50%;
 
-      background-color: @gray--lightest;
+      background-color: @concrete;
     }
 
     &::after {
       left: 50%;
 
-      background-color: #eaeaea;
+      background-color: @gallery;
     }
   }
 
@@ -69,7 +69,7 @@
   font-size: 14px;
   line-height: 18px;
   font-family: @font-secondary;
-  color: @gray--light;
+  color: @tundora;
   margin: 0;
   margin-bottom: 25px;
 
@@ -112,10 +112,10 @@
     line-height: 1;
     font-family: @font-secondary;
     text-align: center;
-    color: @gray--light;
+    color: @tundora;
     text-transform: lowercase;
 
-    background-color: @gray--lightest;
+    background-color: @concrete;
 
     @media @mobile-only {
       transform: translateX(-87/2px);
@@ -135,7 +135,7 @@
     }
 
     @media @desktop {
-      background-color: @gray--lightest;
+      background-color: @concrete;
     }
   }
 
@@ -149,10 +149,10 @@
 
     font-size: 24px;
     line-height: 1;
-    color: @gray--dark;
+    color: @cod-gray;
     text-transform: uppercase;
 
-    border: 1px solid @gray--lighten;
+    border: 1px solid @silver;
     border-radius: 3px;
 
     @media @tablet {
@@ -227,7 +227,7 @@
   font-weight: normal;
   font-size: 36px;
   line-height: 1;
-  color: @gray--dark;
+  color: @cod-gray;
   margin: 0 0 35px;
 
 
@@ -245,7 +245,7 @@
 
   font-size: 14px;
   text-align: center;
-  color: @gray--dark;
+  color: @cod-gray;
   text-transform: uppercase;
 
   @media @tablet {
@@ -297,7 +297,7 @@
   height: 14px;
 
   background-color: @white;
-  border: 1px solid @gray--lighten;
+  border: 1px solid @silver;
   border-radius: 6px;
 
   @media @mobile-only {
@@ -310,7 +310,7 @@
       width: 35px;
       height: 6px;
 
-      background-color: @color-main;
+      background-color: @apple;
       border-radius: 3px;
     }
 
@@ -323,7 +323,7 @@
       width: 35px;
       height: 6px;
 
-      background-color: @color-main;
+      background-color: @apple;
       border-radius: 3px;
     }
 
@@ -344,7 +344,7 @@
     width: 428px;
     height: 6px;
 
-    background-color: #dcdcdc;
+    background-color: @alto;
     border: none;
     border-radius: 2.5px;
   }
@@ -375,7 +375,7 @@
     }
 
     &:active {
-      border: solid 2px @color-main;
+      border: solid 2px @apple;
       box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
 
       &::after {
@@ -393,7 +393,7 @@
       width: 8px;
       height: 8px;
 
-      background-color: @color-main;
+      background-color: @apple;
       border-radius: 50%;
     }
   }
@@ -426,10 +426,10 @@
   }
 
   @media @tablet {
-    border-bottom: 1px solid #bfbfbf;
+    border-bottom: 1px solid @silver;
 
     &:hover {
-      border-color: #999999;
+      border-color: @dusty-gray;
     }
 
     &:active {
