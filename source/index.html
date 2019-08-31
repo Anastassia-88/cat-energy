@@ -3,46 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>Cat Energy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.min.css">
-  <script src="js/picturefill.min.js" async></script>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link as="font" crossorigin="anonymous" href="fonts/oswaldmedium.woff2" rel="preload">
+  <link as="font" crossorigin="anonymous" href="fonts/oswaldregular.woff2" rel="preload">
+  <link href="css/style.min.css" rel="stylesheet">
+  <script async src="js/picturefill.min.js"></script>
 
 
+  <!-- Pixel Glass -->
+  <style>
+    HTML {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* По умолчанию мобильный макет */
+      background-image: url("../img/cat-energy-index-mobile.jpg");
+    }
 
-    <!-- Pixel Glass -->
-    <style>
+    /* Планшет */
+    @media (min-width: 768px) {
       HTML {
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        /* По умолчанию мобильный макет */
-        background-image: url("../img/cat-energy-index-mobile.jpg");
+        /* Планшетный макет */
+        background-image: url("../img/cat-energy-index-tablet.jpg");
       }
+    }
 
-      /* Планшет */
-      @media (min-width: 768px) {
-        HTML {
-          /* Планшетный макет */
-          background-image: url("../img/cat-energy-index-tablet.jpg");
-        }
+    /* Десктоп */
+    @media (min-width: 1300px) {
+      HTML {
+        /* Десктопный макет */
+        background-image: url("../img/cat-energy-index-desktop.jpg");
       }
+    }
 
-      /* Десктоп */
-      @media (min-width: 1300px) {
-        HTML {
-          /* Десктопный макет */
-          background-image: url("../img/cat-energy-index-desktop.jpg");
-        }
-      }
-
-      BODY {
-        opacity: 0.5;
-      }
-    </style>
-    <link rel="stylesheet" href="css/style-pixel-glass.css">
-    <script src="js/script-pixel-glass.min.js"></script>
-
+    BODY {
+      opacity: 0.5;
+    }
+  </style>
+  <link href="css/style-pixel-glass.css" rel="stylesheet">
+  <script src="js/script-pixel-glass.min.js"></script>
 
 
 </head>
@@ -53,21 +51,21 @@
 </div>
 
 <header class="header header--index">
-    <a class="header__logo" href="index.html">
-      <picture>
-        <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-        <img class="header__logo-image" alt="logo" src="img/logo-mobile.svg">
-      </picture>
-    </a>
-    <nav class="main-nav main-nav--nojs main-nav--closed main-nav--index">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--active"><a href="index.html">Главная</a></li>
-        <li class="main-nav__item"><a href="catalog.html">Каталог&nbsp;продукции</a></li>
-        <li class="main-nav__item"><a href="form.html">Подбор&nbsp;программы</a></li>
-      </ul>
-    </nav>
+  <a class="header__logo" href="index.html">
+    <picture>
+      <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+      <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+      <img alt="logo" class="header__logo-image" src="img/logo-mobile.svg">
+    </picture>
+  </a>
+  <nav class="main-nav main-nav--nojs main-nav--closed main-nav--index">
+    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    <ul class="main-nav__list">
+      <li class="main-nav__item main-nav__item--active"><a href="index.html">Главная</a></li>
+      <li class="main-nav__item"><a href="catalog.html">Каталог&nbsp;продукции</a></li>
+      <li class="main-nav__item"><a href="form.html">Подбор&nbsp;программы</a></li>
+    </ul>
+  </nav>
 
 </header>
 
@@ -119,7 +117,8 @@
       <div class="container-responsive">
         <h2 class="example__title">Живой пример</h2>
         <p class="example__description">
-          Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat Energy Slim. Отличный
+          Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat Energy Slim.
+          Отличный
           результат без изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих привычек и&nbsp;по-прежнему спит по&nbsp;16&nbsp;часов
           в&nbsp;день.
         </p>
@@ -140,28 +139,28 @@
       <div>
         <div class="example__image-container">
           <picture class="example__picture example__picture&#45;&#45;before">
-            <source type="image/webp" media="(min-width: 1300px)"
-                    srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+            <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x"
+                    type="image/webp">
+            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x"
+                    type="image/webp">
+            <source srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x" type="image/webp">
 
             <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-            <img class="example__image example__image&#45;&#45;before" src="img/before-mobile@1x.png"
-                  srcset="img/before-mobile@2x.png 2x" alt="Фото до">
+            <img alt="Фото до" class="example__image example__image&#45;&#45;before"
+                 src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x">
           </picture>
           <picture class="example__picture example__picture&#45;&#45;after">
-            <source type="image/webp" media="(min-width: 1300px)"
-                    srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-                    srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+            <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x"
+                    type="image/webp">
+            <source media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x"
+                    type="image/webp">
+            <source srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x" type="image/webp">
 
             <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-            <img class="example__image example__image&#45;&#45;after" src="img/after-mobile@1x.png"
-                  srcset="img/after-mobile@2x.png 2x" alt="Фото после">
+            <img alt="Фото после" class="example__image example__image&#45;&#45;after"
+                 src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x">
           </picture>
         </div>
         <div class="example__controls">
@@ -197,13 +196,13 @@
     </div>
     <div class="contacts__map">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sde!4v1563801092473!5m2!1sru!2sde"
-        allowfullscreen></iframe>
+        allowfullscreen
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sde!4v1563801092473!5m2!1sru!2sde"></iframe>
     </div>
   </section>
   <div class="footer__container">
     <a class="footer__logo" href="index.html">
-      <img class="footer__logo-image" alt="logo" height="24" width="128" src="img/logo-footer.svg">
+      <img alt="logo" class="footer__logo-image" height="24" src="img/logo-footer.svg" width="128">
     </a>
     <div class="social">
       <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
@@ -227,8 +226,8 @@
     </div>
     <div class="copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__image">
-        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="34">
+      <a class="copyright__image" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg height="34" width="27" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="#icon-htmlacademy"></use>
         </svg>
       </a>
