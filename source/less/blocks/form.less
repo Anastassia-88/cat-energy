@@ -1,5 +1,5 @@
 .form {
-  padding-top: 28px;
+
 
   @media @tablet {
     padding-top: 42px;
@@ -12,8 +12,8 @@
 
 .form__main-title {
   display: block;
-  margin: 0 0 36px;
-
+  margin: 0 0 37px;
+  padding-top: 28px;
   font-weight: normal;
   font-size: 36px;
   line-height: 1;
@@ -22,6 +22,10 @@
   background-color: @white;
 
   .container-responsive;
+
+  @media @mobile-only {
+    border-top: 1px solid @gallery;
+  }
 
   @media @tablet {
     margin-bottom: 55px;
@@ -60,7 +64,9 @@
   &--radio {
     box-sizing: border-box;
 
-    border: 1px solid rgba(205, 205, 205, 0.5);
+    @media @tablet {
+      border: 1px solid rgba(205, 205, 205, 0.5);
+    }
   }
 }
 
