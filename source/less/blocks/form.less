@@ -99,6 +99,8 @@
     display: flex;
     justify-content: space-between;
 
+
+
     .form__group {
       width: 570px;
     }
@@ -167,6 +169,13 @@
       flex-wrap: wrap;
     }
   }
+
+  &--radio {
+
+    @media @tablet {
+      padding: 25px 0;
+    }
+  }
 }
 
 .form__option {
@@ -182,6 +191,10 @@
 
     @media @tablet {
       padding-left: 88px;
+    }
+
+    @media @desktop {
+      margin: 0;
     }
   }
 
