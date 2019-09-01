@@ -64,8 +64,33 @@
   &--radio {
     box-sizing: border-box;
 
+    @media @mobile-only {
+      padding-top: 25px;
+      padding-right: 20px;
+      padding-left: 20px;
+      border-top: 1px solid @gallery;
+      border-bottom: 1px solid @gallery;
+    }
+
     @media @tablet {
+      margin-right: 30px;
+      margin-left: 30px;
+      padding-right: 0;
+      padding-left: 0;
       border: 1px solid rgba(205, 205, 205, 0.5);
+    }
+  }
+
+  &--cat-data {
+    @media @mobile-only {
+      padding-right: 20px;
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    @media @tablet {
+      padding-right: 30px;
+      padding-left: 30px;
     }
   }
 }
@@ -99,8 +124,6 @@
     display: flex;
     justify-content: space-between;
 
-
-
     .form__group {
       width: 570px;
     }
@@ -114,23 +137,19 @@
   width: 100%;
 
   font-size: 24px;
+  line-height: 1;
   color: @cod-gray;
 
   span {
     position: relative;
-
-    display: inline-block;
     order: 10;
-    margin-left: -20px;
     padding-right: 20px;
-    padding-left: 20px;
-
-    vertical-align: center;
+    display: inline-block;
+    vertical-align: middle;
 
     background-color: @white;
 
     @media @tablet {
-      margin-left: -40px;
       padding-right: 40px;
       padding-left: 40px;
     }
@@ -144,7 +163,7 @@
     content: "";
     position: absolute;
     top: 20px;
-    left: 0;
+    left: 20px;
 
     width: 100%;
     height: 3px;
@@ -153,6 +172,7 @@
 
     @media @tablet {
       top: 30px;
+      left: 30px;
     }
   }
 }
@@ -187,7 +207,11 @@
   margin-bottom: 14px;
 
   &--radio {
-    padding-left: 50px;
+    padding-left: 45px;
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 27px;
+    height: auto;
 
     @media @tablet {
       padding-left: 88px;
@@ -216,6 +240,7 @@
     padding-right: 15px;
 
     font-size: 16px;
+    line-height: 1;
     color: @mine-shaft;
     text-transform: uppercase;
 
@@ -293,7 +318,7 @@
 .form__radio + label::before {
   content: "";
   position: absolute;
-  top: 7.5px;
+  top: -5px;
   left: 0;
 
   box-sizing: border-box;
@@ -324,14 +349,10 @@
   opacity: 0.3;
 }
 
-//.form__radio:active + label::after {
-//  opacity: 0.3;
-//}
-
 .form__radio + label::after {
   content: "";
   position: absolute;
-  top: 16.5px;
+  top: 4px;
   left: 9px;
 
   width: 12px;
