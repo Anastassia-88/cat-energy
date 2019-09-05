@@ -1,6 +1,4 @@
 .form {
-
-
   @media @tablet {
     padding-top: 42px;
   }
@@ -12,17 +10,18 @@
 
 .form__main-title {
   display: block;
+  box-sizing: border-box;
   margin: 0 0 37px;
   padding-top: 28px;
+  padding-right: 20px;
+  padding-left: 20px;
+
   font-weight: normal;
   font-size: 36px;
   line-height: 1;
   color: @cod-gray;
 
   background-color: @white;
-  box-sizing: border-box;
-  padding-right: 20px;
-  padding-left: 20px;
 
   @media @mobile-only {
     border-top: 1px solid @gallery;
@@ -31,9 +30,10 @@
   @media @tablet {
     margin-bottom: 55px;
     padding-top: 0;
-    font-size: 60px;
     padding-right: 30px;
     padding-left: 30px;
+
+    font-size: 60px;
   }
 
   @media @desktop {
@@ -45,25 +45,24 @@
 }
 
 .form__intro {
+  box-sizing: border-box;
   margin: 0;
   margin-bottom: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   font-size: 14px;
   line-height: 18px;
   color: @cod-gray;
   text-transform: uppercase;
 
-  padding-right: 20px;
-  padding-left: 20px;
-  box-sizing: border-box;
-
   @media @tablet {
     margin-bottom: 65px;
+    padding-right: 70px;
+    padding-left: 70px;
 
     font-size: 20px;
     line-height: 30px;
-    padding-right: 70px;
-    padding-left: 70px;
   }
 
   @media @desktop {
@@ -88,13 +87,13 @@
     @media @mobile-only {
       padding-top: 25px;
       padding-bottom: 29px;
+
       border-top: 1px solid @gallery;
       border-bottom: 1px solid @gallery;
     }
 
     @media @tablet {
       border: 1px solid rgba(205, 205, 205, 0.5);
-
     }
   }
 
@@ -103,16 +102,11 @@
   }
 
   &--cat-data {
-
     margin-bottom: 23px;
 
     @media @tablet {
       margin-bottom: 70px;
     }
-  }
-
-  &--contacts {
-
   }
 }
 
@@ -139,7 +133,6 @@
 }
 
 .form__container {
-
   box-sizing: border-box;
   padding-right: 20px;
   padding-left: 20px;
@@ -152,7 +145,6 @@
   @media @desktop {
     display: flex;
     justify-content: space-between;
-
     max-width: 1300px;
     margin: 0 auto;
     padding-right: 40px;
@@ -177,12 +169,13 @@
 
   span {
     position: relative;
-    order: 10;
 
+    display: inline-block;
+    order: 10;
     padding-top: 30px;
     padding-right: 20px;
     padding-bottom: 30px;
-    display: inline-block;
+
     vertical-align: middle;
 
     background-color: @white;
@@ -229,7 +222,6 @@
   }
 
   &--radio {
-
     @media @tablet {
       padding: 25px 0;
     }
@@ -249,11 +241,12 @@
   }
 
   &--radio {
+    height: auto;
+    margin-bottom: 27px;
     padding-left: 45px;
+
     font-size: 16px;
     line-height: 1;
-    margin-bottom: 27px;
-    height: auto;
 
     @media @tablet {
       padding-left: 88px;
@@ -265,8 +258,8 @@
   }
 
   &--checkbox {
-    padding-left: 50px;
     margin-bottom: 0;
+    padding-left: 50px;
 
     @media @tablet {
       width: 50%;
@@ -482,13 +475,14 @@
 }
 
 .form__legend {
+  margin: 0;
+  margin-bottom: 30px;
+
   font-size: 14px;
   line-height: 1;
   font-family: @font-secondary;
-  color: @tundora;
   text-align: center;
-  margin: 0;
-  margin-bottom: 30px;
+  color: @tundora;
 
   @media @tablet {
     font-size: 16px;
@@ -570,9 +564,9 @@
 
 
   @media @tablet {
+    display: flex;
     padding-right: 30px;
     padding-left: 30px;
-    display: flex;
   }
 
   @media @desktop {

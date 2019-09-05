@@ -9,40 +9,40 @@
   <link href="css/style.min.css" rel="stylesheet">
   <script async src="js/picturefill.min.js"></script>
 
-<!--
+  <!--
 
-  &lt;!&ndash; Pixel Glass &ndash;&gt;
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* По умолчанию мобильный макет */
-      background-image: url("../img/cat-energy-form-mobile.jpg");
-    }
-
-    /* Планшет */
-    @media (min-width: 768px) {
+    &lt;!&ndash; Pixel Glass &ndash;&gt;
+    <style>
       HTML {
-        /* Планшетный макет */
-        background-image: url("../img/cat-energy-form-tablet.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* По умолчанию мобильный макет */
+        background-image: url("../img/cat-energy-form-mobile.jpg");
       }
-    }
 
-    /* Десктоп */
-    @media (min-width: 1300px) {
-      HTML {
-        /* Десктопный макет */
-        background-image: url("../img/cat-energy-form-desktop.jpg");
+      /* Планшет */
+      @media (min-width: 768px) {
+        HTML {
+          /* Планшетный макет */
+          background-image: url("../img/cat-energy-form-tablet.jpg");
+        }
       }
-    }
 
-    BODY {
-      opacity: 0.5;
-    }
-  </style>
-  <link href="css/style-pixel-glass.css" rel="stylesheet">
-  <script src="js/script-pixel-glass.min.js"></script>
--->
+      /* Десктоп */
+      @media (min-width: 1300px) {
+        HTML {
+          /* Десктопный макет */
+          background-image: url("../img/cat-energy-form-desktop.jpg");
+        }
+      }
+
+      BODY {
+        opacity: 0.5;
+      }
+    </style>
+    <link href="css/style-pixel-glass.css" rel="stylesheet">
+    <script src="js/script-pixel-glass.min.js"></script>
+  -->
 
 
 </head>
@@ -78,41 +78,41 @@
       программу питания для вашего кота
     </p>
 
-      <div class="form__container">
-        <fieldset class="form__group form__group--cat-data">
-          <legend class="visually-hidden">Данные кота</legend>
-          <ul class="form__list">
-            <li class="form__option">
-              <label for="name">Имя:*</label>
-              <input class="form__text" id="name" name="name" placeholder="Барсик" required type="text">
-            </li>
-            <li class="form__option">
-              <label for="weight">Вес (кг):*</label>
-              <input class="form__text" id="weight" name="weight" placeholder="7" required type="number">
-            </li>
-            <li class="form__option">
-              <label for="age">Возраст (лет):</label>
-              <input class="form__text" id="age" name="age" placeholder="7" type="number">
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="form__group form__group--radio">
-          <legend class="visually-hidden">Цель</legend>
-          <ul class="form__list form__list--radio">
-            <li class="form__option form__option--radio">
-              <input checked class="visually-hidden form__radio" id="lose-weight" name="target" type="radio">
-              <label for="lose-weight">Похудение</label>
-            </li>
-            <li class="form__option form__option--radio">
-              <input class="visually-hidden form__radio" id="gain-weight" name="target" type="radio">
-              <label for="gain-weight">Набор массы</label>
-            </li>
-            <li class="form__option form__option--radio">
-              <input class="visually-hidden form__radio" id="need-advice" name="target" type="radio">
-              <label for="need-advice">Не знаю (Нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
+    <div class="form__container">
+      <fieldset class="form__group form__group--cat-data">
+        <legend class="visually-hidden">Данные кота</legend>
+        <ul class="form__list">
+          <li class="form__option">
+            <label for="name">Имя:*</label>
+            <input class="form__text" id="name" name="name" placeholder="Барсик" required type="text">
+          </li>
+          <li class="form__option">
+            <label for="weight">Вес (кг):*</label>
+            <input class="form__text" id="weight" name="weight" placeholder="7" required type="number">
+          </li>
+          <li class="form__option">
+            <label for="age">Возраст (лет):</label>
+            <input class="form__text" id="age" name="age" placeholder="7" type="number">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="form__group form__group--radio">
+        <legend class="visually-hidden">Цель</legend>
+        <ul class="form__list form__list--radio">
+          <li class="form__option form__option--radio">
+            <input checked class="visually-hidden form__radio" id="lose-weight" name="target" type="radio">
+            <label for="lose-weight">Похудение</label>
+          </li>
+          <li class="form__option form__option--radio">
+            <input class="visually-hidden form__radio" id="gain-weight" name="target" type="radio">
+            <label for="gain-weight">Набор массы</label>
+          </li>
+          <li class="form__option form__option--radio">
+            <input class="visually-hidden form__radio" id="need-advice" name="target" type="radio">
+            <label for="need-advice">Не знаю (Нужен ваш совет)</label>
+          </li>
+        </ul>
+      </fieldset>
     </div>
 
     <fieldset class="form__group form__group--contacts">
@@ -124,7 +124,7 @@
           <li class="form__option">
             <label for="email">E-mail:*</label>
             <input class="form__text" id="email" name="email" placeholder="kuklachev@gmail.com"
-                   required type="email">
+                    required type="email">
             <svg class="form__icon-mail" height="14" width="18" xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="#icon-mail"></use>
             </svg>
