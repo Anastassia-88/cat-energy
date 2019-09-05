@@ -38,7 +38,7 @@
 
   @media @desktop {
     max-width: 1300px;
-    margin: 0 auto;
+    margin: 0 auto 55px;
     padding-right: 40px;
     padding-left: 40px;
   }
@@ -55,9 +55,10 @@
 
   padding-right: 20px;
   padding-left: 20px;
+  box-sizing: border-box;
 
   @media @tablet {
-    margin-bottom: 70px;
+    margin-bottom: 65px;
 
     font-size: 20px;
     line-height: 30px;
@@ -67,7 +68,7 @@
 
   @media @desktop {
     max-width: 1300px;
-    margin: 0 auto;
+    margin: 0 auto 65px;
     padding-right: 40px;
     padding-left: 40px;
   }
@@ -86,19 +87,14 @@
 
     @media @mobile-only {
       padding-top: 25px;
-      padding-right: 20px;
       padding-bottom: 29px;
-      padding-left: 20px;
       border-top: 1px solid @gallery;
       border-bottom: 1px solid @gallery;
     }
 
     @media @tablet {
-      margin-right: 30px;
-      margin-left: 30px;
-      padding-right: 0;
-      padding-left: 0;
       border: 1px solid rgba(205, 205, 205, 0.5);
+
     }
   }
 
@@ -107,15 +103,11 @@
   }
 
   &--cat-data {
-    @media @mobile-only {
-      padding-right: 20px;
-      padding-left: 20px;
-      margin-bottom: 23px;
-    }
+
+    margin-bottom: 23px;
 
     @media @tablet {
-      padding-right: 30px;
-      padding-left: 30px;
+      margin-bottom: 70px;
     }
   }
 
@@ -143,19 +135,30 @@
       display: flex;
       justify-content: space-between;
     }
+  }
+}
 
-    .form__option {
-      width: 570px;
-    }
+.form__container {
+
+  box-sizing: border-box;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media @tablet {
+    padding-right: 70px;
+    padding-left: 70px;
   }
 
-  .form__container {
+  @media @desktop {
     display: flex;
     justify-content: space-between;
 
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
 
-
-    .form__group {
+    .form__option {
       width: 570px;
     }
   }
@@ -277,7 +280,7 @@
   label {
     display: flex;
     align-items: center;
-    padding-right: 10px;
+    padding-right: 15px;
 
     font-size: 16px;
     line-height: 1;
@@ -291,6 +294,10 @@
 
   @media @tablet {
     height: 52px;
+  }
+
+  @media @desktop {
+    width: 570px;
   }
 }
 
@@ -553,5 +560,25 @@
   @media @tablet {
     top: 17px;
     right: 17px;
+  }
+}
+
+.form__submit-container {
+  box-sizing: border-box;
+  padding-right: 20px;
+  padding-left: 20px;
+
+
+  @media @tablet {
+    padding-right: 30px;
+    padding-left: 30px;
+    display: flex;
+  }
+
+  @media @desktop {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
