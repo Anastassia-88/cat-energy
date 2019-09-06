@@ -5,11 +5,18 @@
 
   background-color: @concrete;
 
+  box-sizing: border-box;
+  padding-right: 20px;
+  padding-left: 20px;
+
   @media @tablet {
     padding-top: 43px;
 
     background-color: @white;
     border-top: 1px solid @mercury;
+
+    padding-right: 30px;
+    padding-left: 30px;
 
     &::before,
     &::after {
@@ -37,6 +44,10 @@
 
   @media @desktop {
     padding-top: 0;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-right: 40px;
+    padding-left: 40px;
 
     &::before {
       right: auto;
@@ -168,12 +179,19 @@
   }
 }
 
-.example__image-container {
+
+
+
+.example__picture-container {
   position: relative;
 
   width: 311px;
   height: 232px;
   margin: 0 auto;
+
+  @media @mobile-only {
+
+  }
 
   @media @tablet {
     width: 690px;
