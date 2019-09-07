@@ -1,16 +1,15 @@
 .features {
-  padding-top: 10px;
-  padding-bottom: 22px;
-
-  .container-responsive;
+  box-sizing: border-box;
+  padding: 10px 20px 22px;
 
   @media @tablet {
-    padding-top: 15px;
-    padding-bottom: 0;
+    padding: 15px 30px 0;
   }
 
   @media @desktop {
-    padding-top: 45px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 45px 40px 0;
   }
 }
 
@@ -102,7 +101,6 @@
   @media @tablet {
     width: 45%;
     margin-bottom: 0;
-    //height: 320px;
     padding-top: 115px;
     padding-right: 10%;
     padding-left: 0;

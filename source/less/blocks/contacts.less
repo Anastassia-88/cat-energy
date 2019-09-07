@@ -8,12 +8,15 @@
 .contacts__text {
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
   min-height: 114px;
-
-  .container-responsive;
+  padding-right: 20px;
+  padding-left: 20px;
 
   @media @tablet {
     min-height: 201px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
   @media @desktop {
@@ -23,6 +26,8 @@
     z-index: 4;
 
     width: 570px;
+    max-width: 1300px;
+    margin: 0 auto;
     padding: 0 90px 0 75px;
 
     background-color: @white;
