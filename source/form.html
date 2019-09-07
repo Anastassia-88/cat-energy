@@ -21,21 +21,27 @@
     <picture>
       <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
       <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-      <img alt="Логотип Cat Energy" class="header__logo-image" src="img/logo-mobile.svg">
+      <img class="header__logo-image" src="img/logo-mobile.svg" alt="Логотип Cat Energy">
     </picture>
   </a>
   <nav class="main-nav main-nav--nojs main-nav--closed">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     <ul class="main-nav__list">
-      <li class="main-nav__item"><a href="index.html">Главная</a></li>
-      <li class="main-nav__item"><a href="catalog.html">Каталог продукции</a></li>
-      <li class="main-nav__item main-nav__item--active"><a href="form.html">Подбор программы</a></li>
+      <li class="main-nav__item">
+        <a href="index.html">Главная</a>
+      </li>
+      <li class="main-nav__item">
+        <a href="catalog.html">Каталог продукции</a>
+      </li>
+      <li class="main-nav__item main-nav__item--active">
+        <a href="form.html">Подбор программы</a>
+      </li>
     </ul>
   </nav>
 </header>
 
 <main>
-  <form action="https://echo.htmlacademy.ru" class="form" method="post">
+  <form class="form" method="post" action="https://echo.htmlacademy.ru">
     <h1 class="form__main-title">Подбор программы</h1>
     <p class="form__intro">
       Заполните анкету и мы подберем<br>
@@ -48,11 +54,11 @@
         <ul class="form__list form__list--cat-data">
           <li class="form__option form__option-cat-data">
             <label for="name">Имя:*</label>
-            <input class="form__text" id="name" name="name" placeholder="Барсик" required type="text">
+            <input class="form__text" id="name" name="name" placeholder="Барсик" type="text" required>
           </li>
           <li class="form__option form__option-cat-data">
             <label for="weight">Вес (кг):*</label>
-            <input class="form__text" id="weight" name="weight" placeholder="7" required type="number">
+            <input class="form__text" id="weight" name="weight" placeholder="7" type="number" required>
           </li>
           <li class="form__option form__option-cat-data">
             <label for="age">Возраст (лет):</label>
@@ -64,7 +70,7 @@
         <legend class="visually-hidden">Цель</legend>
         <ul class="form__list form__list--radio">
           <li class="form__option form__option--radio">
-            <input checked class="visually-hidden form__radio" id="lose-weight" name="target" type="radio">
+            <input class="visually-hidden form__radio" id="lose-weight" name="target" type="radio" checked>
             <label for="lose-weight">Похудение</label>
           </li>
           <li class="form__option form__option--radio">
@@ -122,19 +128,19 @@
       </legend>
         <ul class="form__list form__list--secondary">
           <li class="form__option form__option--checkbox">
-            <input checked class="visually-hidden form__checkbox" id="sweetener" name="sweetener" type="checkbox">
+            <input class="visually-hidden form__checkbox" type="checkbox" id="sweetener" name="sweetener" checked>
             <label for="sweetener">Сахарозаменитель</label>
           </li>
           <li class="form__option form__option--checkbox">
-            <input class="visually-hidden form__checkbox" id="water" name="water" type="checkbox">
+            <input class="visually-hidden form__checkbox" type="checkbox" id="water" name="water">
             <label for="water">Питьевая вода</label>
           </li>
           <li class="form__option form__option--checkbox">
-            <input class="visually-hidden form__checkbox" id="milk" name="milk" type="checkbox">
+            <input class="visually-hidden form__checkbox" type="checkbox" id="milk" name="milk">
             <label for="milk">Молоко</label>
           </li>
           <li class="form__option form__option--checkbox">
-            <input class="visually-hidden form__checkbox" id="vitamins" name="vitamins" type="checkbox">
+            <input class="visually-hidden form__checkbox" type="checkbox" id="vitamins" name="vitamins">
             <label for="vitamins">Витамины</label>
           </li>
         </ul>
@@ -147,7 +153,6 @@
       </p>
     </div>
   </form>
-
 </main>
 
 <footer class="footer">
@@ -175,7 +180,7 @@
   </section>
   <div class="footer__container">
     <a class="footer__logo" href="index.html">
-      <img alt="Логотип Cat Energy" class="footer__logo-image" height="24" src="img/logo-footer.svg" width="128">
+      <img class="footer__logo-image" width="128" height="24" src="img/logo-footer.svg" alt="Логотип Cat Energy">
     </a>
     <div class="social">
       <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
