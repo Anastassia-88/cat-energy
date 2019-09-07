@@ -135,6 +135,7 @@
 }
 
 .form__title-container {
+  display: block;
   box-sizing: border-box;
   padding-right: 20px;
   padding-left: 20px;
@@ -162,27 +163,6 @@
   line-height: 1;
   color: @cod-gray;
 
-
-  span {
-    position: relative;
-
-    display: inline-block;
-    order: 10;
-    padding-top: 30px;
-    padding-right: 20px;
-    padding-bottom: 30px;
-
-    vertical-align: middle;
-
-    background-color: @white;
-
-    @media @tablet {
-      margin-left: -40px;
-      padding-right: 40px;
-      padding-left: 40px;
-    }
-  }
-
   @media @tablet {
     font-size: 36px;
   }
@@ -201,6 +181,26 @@
     @media @tablet {
       top: 30px;
     }
+  }
+}
+
+.form__title-content {
+  position: relative;
+
+  display: inline-block;
+  order: 10;
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+
+  vertical-align: middle;
+
+  background-color: @white;
+
+  @media @tablet {
+    margin-left: -40px;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 }
 
