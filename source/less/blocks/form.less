@@ -368,12 +368,12 @@
   border: 1px solid @silver;
 }
 
-.form__checkbox:active + label::before {
+.form__checkbox:disabled + label::before {
   border: 1px solid @silver;
   opacity: 0.3;
 }
 
-.form__checkbox:active + label {
+.form__checkbox:disabled + label {
   opacity: 0.3;
 }
 
@@ -430,11 +430,11 @@
   border-color: @silver;
 }
 
-.form__radio:active + label::before {
+.form__radio:disabled + label::before {
   opacity: 0.3;
 }
 
-.form__radio:active + label {
+.form__radio:disabled + label {
   opacity: 0.3;
 }
 

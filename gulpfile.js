@@ -22,7 +22,8 @@ const path = require("path");
 
 
 
-// Publish website using GitHub pages: npx gulp deploy
+// Publish website using GitHub pages
+// npx gulp deploy
 function deploy(cb) {
   ghPages.publish(path.join(process.cwd(), './build'), cb);
 }
@@ -37,15 +38,15 @@ gulp.task("clean", function () {
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/css/style-pixel-glass.css"
+    "source/img/**"
   ], {
     base: "source"
   })
     .pipe(gulp.dest("build"));
 });
 
-//  Convert images in the "source" folder to WebP: npx gulp webp
+//  Convert images in the "source" folder to WebP
+//  npx gulp webp
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
@@ -105,6 +106,7 @@ gulp.task("js", function () {
     .pipe(server.stream());
 });
 
+// npm run build
 gulp.task("build", gulp.series(
   "clean",
   "copy",
@@ -130,4 +132,5 @@ gulp.task("refresh", function (done) {
   done();
 });
 
+// npm run start
 gulp.task("start", gulp.series("build", "server"));
