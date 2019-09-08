@@ -25,7 +25,8 @@ const textAfter = example.querySelector(".example__control-text--after");
 let flag = false;
 
 if (example) {
-  textBefore.addEventListener("click", function () {
+  textBefore.addEventListener("click", function (evt) {
+    evt.preventDefault();
     pictureBefore.style.width = 100 + "%";
     pictureAfter.style.width = 0 + "%";
     control.style.left = 0 + "px";
@@ -37,7 +38,8 @@ if (example) {
     }
   });
 
-  textAfter.addEventListener("click", function () {
+  textAfter.addEventListener("click", function (evt) {
+    evt.preventDefault();
     pictureBefore.style.width = 0 + "%";
     pictureAfter.style.width = 100 + "%";
     control.style.left = controlContainer.offsetWidth + "px";
@@ -49,6 +51,9 @@ if (example) {
     }
   });
 
+  control.addEventListener('click', function (evt) {
+    evt.preventDefault();
+  }, false);
 
   control.addEventListener('mousedown', function (evt) {
     evt.preventDefault();
