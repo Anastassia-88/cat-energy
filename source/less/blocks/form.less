@@ -165,6 +165,10 @@
     @media @tablet {
       top: 30px;
     }
+
+    @media @desktop {
+      top: 50px;
+    }
   }
 }
 
@@ -368,6 +372,10 @@
   border: 1px solid @silver;
 }
 
+.form__checkbox:focus + label::before {
+  border: 2px solid @tundora;
+}
+
 .form__checkbox:disabled + label::before {
   border: 1px solid @silver;
   opacity: 0.3;
@@ -429,6 +437,10 @@
 .form__radio:hover + label::before {
   border-color: @silver;
 }
+
+//.form__radio:focus + label::before {
+//  border-color: red;
+//}
 
 .form__radio:disabled + label::before {
   opacity: 0.3;
