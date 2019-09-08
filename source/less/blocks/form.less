@@ -45,7 +45,6 @@
 }
 
 .form__intro {
-  box-sizing: border-box;
   margin: 0;
   margin-bottom: 39px;
   padding-right: 20px;
@@ -55,6 +54,7 @@
   line-height: 18px;
   color: @cod-gray;
   text-transform: uppercase;
+  width: 230px;
 
   @media @tablet {
     margin-bottom: 65px;
@@ -63,12 +63,15 @@
 
     font-size: 20px;
     line-height: 30px;
+    width: 330px;
   }
 
   @media @desktop {
+    box-sizing: border-box;
+    width: auto;
     max-width: 1300px;
     margin: 0 auto 65px;
-    padding-right: 40px;
+    padding-right: 930px;
     padding-left: 40px;
   }
 }
