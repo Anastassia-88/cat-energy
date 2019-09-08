@@ -42,6 +42,7 @@
 
 .example__content {
   position: relative;
+
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -311,9 +312,8 @@
     width: auto;
     margin: 0;
 
-    text-align: center;
     line-height: 135px;
-
+    text-align: center;
   }
 }
 
@@ -464,16 +464,17 @@
 
   @media @desktop {
     flex-direction: column;
-    margin-bottom: 0;
     margin-top: auto;
+    margin-bottom: 0;
   }
 }
 
 .example__control-text {
-  color: @cod-gray;
-  text-decoration: none;
   position: absolute;
   z-index: 20;
+
+  color: @cod-gray;
+  text-decoration: none;
 
   &--before {
     left: 0;
