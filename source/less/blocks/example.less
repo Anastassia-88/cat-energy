@@ -100,6 +100,13 @@
   }
 }
 
+.example__description-container {
+  @media @desktop {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .example__description {
   position: relative;
   z-index: 20;
@@ -275,6 +282,10 @@
 
     font-size: 60px;
   }
+
+  @media @desktop {
+    margin: 45px 0 140px;
+  }
 }
 
 .example__text {
@@ -301,6 +312,8 @@
     margin: 0;
 
     text-align: center;
+    line-height: 135px;
+
   }
 }
 
@@ -324,6 +337,10 @@
     font-size: 20px;
 
     background-color: transparent;
+  }
+
+  @media @desktop {
+    height: 135px;
   }
 }
 
@@ -447,6 +464,8 @@
 
   @media @desktop {
     flex-direction: column;
+    margin-bottom: 0;
+    margin-top: auto;
   }
 }
 
