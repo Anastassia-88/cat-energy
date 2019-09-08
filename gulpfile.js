@@ -107,15 +107,9 @@ gulp.task("js", function () {
 });
 
 // npm run build
-gulp.task("build", gulp.series(
-  "clean",
-  "copy",
-  "css",
-  "sprite",
-  "html",
-  "js"
-));
+gulp.task("build", gulp.series("clean", gulp.parallel("copy", "css", "sprite", "js"), "html"));
 
+// npm run server
 gulp.task("server", function () {
   server.init({
     server: "build/"
