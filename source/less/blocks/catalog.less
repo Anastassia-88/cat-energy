@@ -13,24 +13,24 @@
       margin-bottom: 86px;
     }
   }
-}
 
-.catalog--main {
-  box-sizing: border-box;
+  &--main {
+    box-sizing: border-box;
 
-  @media @tablet {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-right: 30px;
-    padding-left: 30px;
-  }
+    @media @tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
 
-  @media @desktop {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding-right: 40px;
-    padding-left: 40px;
+    @media @desktop {
+      max-width: 1300px;
+      margin: 0 auto 20px;
+      padding-right: 40px;
+      padding-left: 40px;
+    }
   }
 }
 
@@ -52,6 +52,10 @@
     font-size: 60px;
     border: none;
     padding: 45px 0 20px;
+  }
+
+  @media @desktop {
+    padding: 60px 0 20px;
   }
 }
 

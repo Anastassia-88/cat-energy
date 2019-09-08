@@ -101,7 +101,15 @@
   }
 
   &--checkbox {
-    padding-bottom: 25px;
+    margin-bottom: 25px;
+
+    @media @tablet {
+      margin-bottom: 50px;
+    }
+
+    @media @desktop {
+      margin-bottom: 60px;
+    }
   }
 
   &--cat-data {
@@ -134,10 +142,6 @@
     margin: 0 auto;
     padding-right: 40px;
     padding-left: 40px;
-
-    .form__option {
-      width: 570px;
-    }
   }
 }
 
@@ -167,11 +171,11 @@
     background-color: @apple;
 
     @media @tablet {
-      top: 30px;
+      top: 50px;
     }
 
     @media @desktop {
-      top: 50px;
+      top: 90px;
     }
   }
 }
@@ -190,8 +194,7 @@
   @media @desktop {
     max-width: 1300px;
     margin: 0 auto;
-    padding-right: 40px;
-    padding-left: 40px;
+    padding: 40px;
   }
 }
 
@@ -276,6 +279,10 @@
     @media @tablet {
       padding: 25px 0;
     }
+
+    @media @desktop {
+      padding: 20px 0;
+    }
   }
 }
 
@@ -286,6 +293,14 @@
   box-sizing: border-box;
   height: 45px;
   margin-bottom: 14px;
+
+  @media @tablet {
+    height: 52px;
+  }
+
+  @media @desktop {
+    width: 570px;
+  }
 
   &:last-of-type {
     margin-bottom: 0;
@@ -307,9 +322,7 @@
 
     @media @tablet {
       padding-left: 88px;
-    }
-
-    @media @desktop {
+      height: 52px;
       margin: 0;
     }
   }
@@ -340,14 +353,6 @@
     @media @tablet {
       font-size: 20px;
     }
-  }
-
-  @media @tablet {
-    height: 52px;
-  }
-
-  @media @desktop {
-    width: 570px;
   }
 }
 
@@ -551,6 +556,7 @@
 
   @media @tablet {
     font-size: 16px;
+    line-height: 52px;
   }
 }
 
@@ -562,6 +568,12 @@
     display: inline-block;
     width: 40%;
     margin-right: 10%;
+    margin-bottom: 0;
+  }
+
+  @media @desktop {
+    width: 570px;
+    margin-right: 80px;
   }
 }
 
@@ -644,12 +656,14 @@
   box-sizing: border-box;
   padding-right: 20px;
   padding-left: 20px;
+  padding-bottom: 20px;
 
 
   @media @tablet {
     display: flex;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 70px;
+    padding-left: 70px;
+    padding-bottom: 72px;
   }
 
   @media @desktop {
@@ -657,5 +671,6 @@
     margin: 0 auto;
     padding-right: 40px;
     padding-left: 40px;
+    padding-bottom: 82px;
   }
 }
