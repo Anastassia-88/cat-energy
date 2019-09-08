@@ -33,15 +33,13 @@
   color: @cod-gray;
 
   background-color: @white;
-
-  @media @mobile-only {
-    padding: 27px 20px 40px;
-
-    border-top: 1px solid @gallery;
-  }
+  padding: 27px 20px 40px;
+  border-top: 1px solid @gallery;
 
   @media @tablet {
     font-size: 60px;
+    border: none;
+    padding: 45px 0 20px;
   }
 }
 
@@ -223,12 +221,12 @@
   flex-grow: 1;
   padding: 20px 0;
 
-
   &--secondary {
     margin-bottom: 15px;
     padding: 0;
 
     @media @tablet {
+      display: flex;
       flex-direction: row;
       align-items: center;
       margin: 0;
@@ -263,11 +261,9 @@
     margin: 0 0 11px;
 
     @media @tablet {
-      margin: 0;
-    }
-
-    @media @desktop {
       width: 50%;
+      margin: 0;
+      line-height: 30px;
     }
   }
 }
@@ -322,12 +318,12 @@
   font-family: @font-secondary;
   color: @tundora;
 
-  @media @desktop {
+  @media @tablet {
     font-size: 16px;
   }
 
   &--secondary {
-    @media @desktop {
+    @media @tablet {
       width: 50%;
     }
   }
@@ -337,19 +333,29 @@
   display: flex;
   justify-content: space-between;
 
+  @media @tablet {
+    height: 30px;
+    border-bottom: 1px solid @silver;
+  }
+
   th {
     padding: 0;
 
     font-weight: normal;
+    display: flex;
+    align-items: center;
   }
 
   td {
     padding: 0;
+    display: flex;
+    align-items: center;
   }
 
   &--secondary {
     font-size: 14px;
     line-height: 1;
+    border: none;
 
     @media @desktop {
       justify-content: left;
