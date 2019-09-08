@@ -14,7 +14,7 @@ navToggle.addEventListener('click', function() {
 
 
 // Before - After
-const example = document.querySelector(".example");
+const example = document.querySelector(".example__content");
 const exampleControls = example.querySelector(".example__controls");
 const controlContainer = example.querySelector(".example__control-container");
 const pictureBefore = example.querySelector(".example__picture--before");
