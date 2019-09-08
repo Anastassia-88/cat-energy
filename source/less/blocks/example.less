@@ -454,7 +454,6 @@
 
   position: absolute;
   z-index: 20;
-
   cursor: pointer;
 
   &--before {
@@ -466,10 +465,10 @@
   }
 
   @media @tablet {
-    border-bottom: 1px solid @silver;
+    border-bottom: 1px dotted @silver;
 
     &:hover {
-      border-color: @dusty-gray;
+      border-bottom: 1px solid @dusty-gray;
     }
 
     &:active {
