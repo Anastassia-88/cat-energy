@@ -13,6 +13,16 @@
 }
 
 .social__link {
+  margin-right: 40px;
+
+  @media @tablet {
+    margin-right: 30px;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
   svg {
     transition: 0.2s linear;
 
@@ -40,9 +50,6 @@
   }
 
   &--instagram {
-    margin-right: 40px;
-    margin-left: 40px;
-
     svg {
       width: 17px;
       height: 17px;
