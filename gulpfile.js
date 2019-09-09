@@ -86,6 +86,16 @@ gulp.task("imagemin", function () {
     .pipe(gulp.dest("build/img"));
 });
 
+//  Combine svg files into one with <symbol> elements
+gulp.task("sprite", function () {
+  return gulp.src("source/img/sprite/*.svg")
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
+});
+
 //  Minify HTML
 gulp.task("html", function () {
   return gulp.src("source/*.html")
