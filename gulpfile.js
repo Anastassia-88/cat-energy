@@ -37,20 +37,18 @@ gulp.task("clean", function () {
 //  Copy files from the "source" folder to the "build" folder
 gulp.task("copy", function () {
   return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/img/**"
+    "source/fonts/**/*.{woff,woff2}"
   ], {
     base: "source"
   })
     .pipe(gulp.dest("build"));
 });
 
-//  Convert images in the "source" folder to WebP
-//  npx gulp webp
+//  Convert images from the "source" folder to WebP and save them in the "build" folder
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 //  Combine svg files into one with <symbol> elements
@@ -77,14 +75,15 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
-gulp.task("images", function () {
+// Minify and copy images from the "source" folder to the "build" folder
+gulp.task("imagemin", function () {
   return gulp.src("source/img/**/*{.png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 //  Minify HTML
@@ -107,7 +106,7 @@ gulp.task("js", function () {
 });
 
 // npm run build
-gulp.task("build", gulp.series("clean", gulp.parallel("copy", "css", "sprite", "js"), "html"));
+gulp.task("build", gulp.series("clean", gulp.parallel("copy", "css", "sprite", "webp", "js", "imagemin"), "html"));
 
 
 gulp.task("server", function () {
