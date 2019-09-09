@@ -51,16 +51,6 @@ gulp.task("webp", function () {
     .pipe(gulp.dest("build/img"));
 });
 
-//  Combine svg files into one with <symbol> elements
-gulp.task("sprite", function () {
-  return gulp.src("source/img/sprite/*.svg")
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
-});
-
 //  Prefix CSS properties
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")

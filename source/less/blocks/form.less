@@ -371,9 +371,12 @@
     }
 
     label {
+      align-items: flex-start;
       padding-top: 14px;
       padding-right: 0;
       padding-bottom: 15px;
+
+      line-height: 1.15;
 
       @media @tablet {
         padding-top: 16px;
@@ -386,7 +389,7 @@
 .form__checkbox + label::before {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 50%;
   left: 0;
 
   box-sizing: border-box;
@@ -394,13 +397,15 @@
   height: 30px;
 
   border: 1px solid @silver;
+  transform: translateY(-15px);
 
   @media @tablet {
-    top: 6px;
     left: 0;
 
     width: 40px;
     height: 40px;
+
+    transform: translateY(-20px);
   }
 }
 
@@ -424,8 +429,8 @@
 .form__checkbox + label::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 50%;
+  left: -2px;
 
   box-sizing: border-box;
   width: 12px;
@@ -433,14 +438,13 @@
 
   border-right: 2px solid @apple;
   border-bottom: 2px solid @apple;
-  transform: rotate(45deg);
+  transform: rotate(45deg) translateY(-15px);
   opacity: 0;
 
   transition-duration: 300ms;
 
   @media @tablet {
-    top: 13.5px;
-    left: 15px;
+    transform: rotate(45deg) translateY(-20px);
   }
 }
 
@@ -582,9 +586,10 @@
   color: @tundora;
 
   @media @tablet {
+    margin-bottom: 0;
+
     font-size: 16px;
     line-height: 52px;
-    margin-bottom: 0;
   }
 }
 
