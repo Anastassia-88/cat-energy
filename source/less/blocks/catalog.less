@@ -287,10 +287,14 @@
   text-transform: uppercase;
 
   @media @tablet {
-    display: flex;
-    justify-content: center;
-
     font-size: 20px;
+  }
+
+  &--main {
+    @media @tablet {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &--to-all {
@@ -316,16 +320,18 @@
 }
 
 .catalog__link {
-  display: block;
-  width: 80px;
-
   color: @cod-gray;
   text-decoration: none;
 
-  @media @tablet {
-    width: 130px;
+  &--main {
+    display: block;
+    width: 80px;
 
-    text-align: center;
+    @media @tablet {
+      width: 130px;
+
+      text-align: center;
+    }
   }
 }
 
